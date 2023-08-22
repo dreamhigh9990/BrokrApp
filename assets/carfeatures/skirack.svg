@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g>
+    <line x1="437.85" y1="29.02" x2="470.82" y2="29.02" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <polygon points="454.33 412.86 473.5 412.86 463.91 434.71 454.33 456.57 444.75 434.71 435.17 412.86 454.33 412.86" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <line x1="454.33" y1="29.02" x2="454.33" y2="480.11" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+  <g>
+    <line x1="41.18" y1="31.89" x2="74.15" y2="31.89" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <polygon points="57.67 415.73 76.83 415.73 67.25 437.58 57.67 459.44 48.09 437.58 38.5 415.73 57.67 415.73" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <line x1="57.67" y1="31.89" x2="57.67" y2="482.98" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+  <g>
+    <g>
+      <path d="M256.01,151.38l36.15-73.86,10.86-22.18c7.33-14.97,25.57-21.22,40.54-13.89,10.71,5.24,16.96,16.08,16.96,27.31,0,4.45-.98,8.98-3.07,13.23l-10.86,22.18-56.85,116.12" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+      <path d="M256.01,289.19h-.01l-14.02,28.66-36.03,73.58-36.52,74.59c-7.33,14.97-25.57,21.22-40.54,13.89-14.97-7.33-21.22-25.57-13.89-40.54l10.86-22.18,33.07-67.54,63.34-129.37" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+      <polyline points="292.16 77.52 346.59 104.17 289.74 220.29" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+      <polyline points="256.01 289.19 256.01 289.2 241.97 317.85 158.92 349.66 205.94 391.43 125.85 417.2" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    </g>
+    <g>
+      <rect x="245.48" y="16.59" width="60.6" height="488.19" rx="30.3" ry="30.3" transform="translate(638.1 373.54) rotate(153.91)" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+      <polyline points="386.15 417.2 306.06 391.43 353.08 349.67 270.03 317.85 165.42 104.17 219.84 77.52" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    </g>
+  </g>
+</svg>

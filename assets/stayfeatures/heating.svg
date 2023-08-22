@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g>
+    <g>
+      <rect x="94.63" y="153.53" width="83.88" height="335.71" rx="32.54" ry="32.54" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+      <rect x="178.56" y="153.53" width="83.88" height="335.71" rx="32.54" ry="32.54" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+      <rect x="262.81" y="153.53" width="83.88" height="335.71" rx="32.54" ry="32.54" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+      <rect x="347.04" y="153.53" width="83.88" height="335.71" rx="32.54" ry="32.54" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    </g>
+    <line x1="94.63" y1="218.26" x2="60.58" y2="218.26" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <polyline points="464.98 190.56 464.98 218.26 430.92 218.26" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+  <path d="M173,28c10,18,4,39-4,57-5,11-1,24,4,35" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M263,46c9,16,6,36-3,52-7,13-3,28,3,40" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M347,25c5,11,8,23,5,35-3,8-8,14-10,22-3,12-1,24,5,35" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+</svg>

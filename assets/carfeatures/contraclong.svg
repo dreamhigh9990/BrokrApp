@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <line x1="248.31" y1="225.45" x2="108.9" y2="225.45" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.79px;"/>
+  <line x1="155.37" y1="318.39" x2="108.9" y2="318.39" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.79px;"/>
+  <line x1="294.78" y1="132.51" x2="108.9" y2="132.51" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.79px;"/>
+  <path d="M393.03,261.98V125.74c0-39.04,0-58.56-7.6-73.47-6.68-13.12-17.34-23.78-30.46-30.46-14.91-7.6-34.43-7.6-73.47-7.6H132.8c-39.04,0-58.56,0-73.47,7.6-13.12,6.68-23.78,17.35-30.46,30.46-7.6,14.91-7.6,34.43-7.6,73.47v241.64c0,39.04,0,58.55,7.6,73.47,6.68,13.12,17.35,23.78,30.46,30.46,14.91,7.6,34.43,7.6,73.47,7.6h167.29" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.79px;"/>
+  <circle cx="373.89" cy="380.95" r="116.84" style="fill: none; stroke: #050505; stroke-miterlimit: 10; stroke-width: 20.79px;"/>
+  <polyline points="406.61 411.96 350.61 411.96 350.61 312.15" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.79px;"/>
+</svg>

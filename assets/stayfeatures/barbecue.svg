@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="barbacoa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g>
+    <circle cx="101.17" cy="451.53" r="41.79" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.57px;"/>
+    <line x1="159.39" y1="276.84" x2="115.07" y2="410.41" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.57px;"/>
+    <line x1="392.62" y1="450.07" x2="143.68" y2="450.07" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.57px;"/>
+    <path d="M256.31,312.43c91.38,0,168.17-62.47,189.99-147.04H66.32c21.82,84.57,98.6,147.04,189.99,147.04Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.57px;"/>
+    <line x1="392.62" y1="450.07" x2="339.04" y2="279.78" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.57px;"/>
+    <line x1="392.62" y1="450.07" x2="406.28" y2="491.86" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.57px;"/>
+    <rect x="51.18" y="136.63" width="408.68" height="20.53" rx="10.27" ry="10.27" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.57px;"/>
+    <line x1="37.48" y1="136.63" x2="474.52" y2="136.63" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.57px;"/>
+    <path d="M202,47c7,9,10,22,7,34-3,10-1,21,8,29" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.57px;"/>
+    <path d="M247,19c3,6,5,12,4,19-2,6-6,11-7,18,0,7,0,14,3,20" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.57px;"/>
+    <path d="M292,45c0,7,0,14-2,20-4,11-15,16-19,27-2,6-2,13-2,20" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.57px;"/>
+    <circle cx="101.17" cy="451.53" r="1.17" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.57px;"/>
+  </g>
+  <path d="M379.17,203.05c-3.88,36.81-40.51,63.06-81.91,58.7" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+</svg>

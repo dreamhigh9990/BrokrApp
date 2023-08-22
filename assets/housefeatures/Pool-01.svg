@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M30.93,333.46l42.33-14.65c63.49-21.16,135.12-6.51,185.59,39.07h0c50.47,45.58,120.47,60.24,185.59,39.07l42.33-14.65" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 35px;"/>
+  <circle cx="372.81" cy="170.66" r="65.12" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 35px;"/>
+  <path d="M291.41,382.3l16.28-16.28c27.68-27.68,27.68-71.63,0-97.68l-122.1-122.1c-22.79-22.79-58.61-22.79-81.4,0L32.56,217.87c-9.77,9.77-9.77,26.05,0,35.82h0c8.14,8.14,21.16,9.77,32.56,3.26l79.77-53.72,48.84,48.84-56.98,56.98" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 35px;"/>
+</svg>

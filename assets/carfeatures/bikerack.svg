@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <circle cx="109.03" cy="299.81" r="89.49" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <polygon points="236.79 304.55 107.48 304.55 180.84 177.3 366.11 177.3 236.79 304.55" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <g>
+    <circle cx="399.97" cy="299.81" r="89.49" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <path d="M399.97,299.81c0-95.94-25.28-173.58-56.52-173.58" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+  <polyline points="135.41 136.95 186.1 135.92 162.31 137.99 236.79 304.55" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+</svg>

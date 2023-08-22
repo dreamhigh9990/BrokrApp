@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect x="173.93" y="154.63" width="164.13" height="333.37" rx="22.69" ry="22.69" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <circle cx="256" cy="249.73" r="51.29" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <g>
+    <circle cx="256" cy="249.73" r="17.73"/>
+    <g>
+      <circle cx="290.64" cy="370.46" r="17.73"/>
+      <circle cx="290.64" cy="427.03" r="17.73"/>
+      <circle cx="221.36" cy="370.46" r="17.73"/>
+      <circle cx="221.36" cy="427.03" r="17.73"/>
+    </g>
+  </g>
+  <path d="M168.75,68.26c48.19-48.19,126.31-48.19,174.5,0" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M194.9,114.71c33.75-33.75,88.46-33.75,122.21,0" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+</svg>

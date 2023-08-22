@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M303.47,87.45h-93.67c-23.43,0-42.6-16.5-42.6-36.68h0c0-20.17,19.17-36.68,42.6-36.68h93.67c23.43,0,42.6,16.5,42.6,36.68h0c0,20.17-19.17,36.68-42.6,36.68h0Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M91.99,412.18H420.01c12.87,0,23.32,10.45,23.32,23.32v.23c0,34.32-27.86,62.18-62.18,62.18H130.85c-34.32,0-62.18-27.86-62.18-62.18v-.23c0-12.87,10.45-23.32,23.32-23.32Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M79.42,416.42c-.53-2.74-.81-5.58-.81-8.47,0-24.7,19.98-44.71,44.66-44.77h.11c24.72,0,44.75,20.04,44.75,44.77,0,1.46-.08,2.91-.22,4.34" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M338.8,412.28c-.14-1.43-.22-2.88-.22-4.34,0-24.73,20.04-44.77,44.75-44.77,2.25,0,4.48,.17,6.65,.5,21.56,3.2,38.1,21.81,38.1,44.27,0,1.85-.11,3.67-.34,5.46" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <g>
+    <path d="M291,273c5,7,6,17,4,25-3,8-9,13-10,22-1,7,2,14,6,20" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <path d="M271,181c11,14,19,35,6,50-7,7-15,12-18,22-2,6-1,11-1,17,1,10,6,17,13,24" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <path d="M223,287c-12-14-8-35,4-48,4-12,3-25-4-35" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <path d="M245,306c6,9,8,20,5,31-3,8-10,14-12,22-2,10,2,18,7,26" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+  <path d="M123.37,363.17V149.45c0-34.1,27.9-62,62-62h141.26c34.1,0,62,27.9,62,62v214.04" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+</svg>

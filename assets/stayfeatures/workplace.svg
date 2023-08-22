@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="work_place" data-name="work place" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g id="SVGRepo_iconCarrier-2" data-name="SVGRepo iconCarrier-2">
+    <path id="primary" d="M56.56,194.19V100.8c.02-16.19,11.26-30.2,27.06-33.72l27.85-6.23" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <line id="primary-2" x1="30.61" y1="194.19" x2="117.08" y2="194.19" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <path id="secondary" d="M186.26,96.04l-62.69,28.97-7.35-15.74c-5.24-11.25-4.05-24.45,3.11-34.59l-5.71-12.1c-4.03-8.67-.28-18.97,8.39-23s18.97-.28,23,8.39l5.71,12.1c12.23,1.1,22.96,8.61,28.19,19.72l7.35,16.26h0Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+  <rect x="18.72" y="194.04" width="474.55" height="35.3" rx="13.44" ry="13.44" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M41.59,229.33h29.73v231.27c0,7.42-6.02,13.44-13.44,13.44h-2.86c-7.42,0-13.44-6.02-13.44-13.44V229.33h0Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M304.31,229.33h175.53v231.27c0,7.42-6.02,13.44-13.44,13.44h-148.65c-7.42,0-13.44-6.02-13.44-13.44V229.33h0Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="304.31" y1="387.99" x2="479.84" y2="387.99" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="304.31" y1="308.5" x2="479.84" y2="308.5" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="366.92" y1="270.43" x2="410.66" y2="270.43" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="366.92" y1="347.69" x2="410.66" y2="347.69" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="366.92" y1="429.42" x2="410.66" y2="429.42" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="lavadora" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect x="27.23" y="15.4" width="467.23" height="484.09" rx="12" ry="12" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="27.23" y1="126.47" x2="494.47" y2="125.7" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="65.21" y1="75.95" x2="182.4" y2="75.95" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <circle cx="369.68" cy="75.95" r="2.45" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <circle cx="419.45" cy="75.95" r="2.45" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <rect x="221.02" y="49.73" width="88.85" height="52.45" rx="12" ry="12"/>
+  <g>
+    <g>
+      <path d="M388.21,318.58c0,77.21-62.58,139.79-139.78,139.79-28.5,0-55-8.53-77.1-23.17-37.78-25.02-62.69-67.91-62.69-116.62s23.4-88.94,59.23-114.25c22.77-16.09,50.56-25.53,80.56-25.53,77.2,0,139.78,62.58,139.78,139.78Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+      <path d="M216.91,320.93c0,51.13-18.75,95.07-45.58,114.27-37.78-25.02-62.69-67.91-62.69-116.62s23.4-88.94,59.23-114.25c28.66,17.8,49.04,63.29,49.04,116.6Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    </g>
+    <line x1="397.74" y1="261.16" x2="397.74" y2="376.01" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+</svg>

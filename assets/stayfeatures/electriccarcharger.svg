@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="cargador_electrico" data-name="cargador electrico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M80.94,28.95H240.09c11.04,0,20,8.96,20,20V483.05H60.94V48.95c0-11.04,8.96-20,20-20Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="28.77" y1="483.05" x2="290.21" y2="483.05" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="124.77" y1="238.05" x2="180.94" y2="238.05" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="124.77" y1="238.05" x2="152.85" y2="188.78" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="180.94" y1="238.05" x2="152.85" y2="301.37" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M260.09,126.48h17.24c29.84,0,55.35,21.9,59.39,51.46,.85,6.23,1.38,13.22,1.5,21.05,1.02,69.45,0,5.11,0,5.11l.4,119.6c.04,12.48,5.87,24.25,15.84,31.75,13.93,10.47,35.39,19.16,57.5-.45,8.42-7.47,13.07-18.32,13.07-29.58v-103.96" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M368.85,96.44h114.38v72.97c0,27.6-22.4,50-50,50h-14.38c-27.6,0-50-22.4-50-50V96.44h0Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="394.38" y1="96.44" x2="394.38" y2="45.46" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="459.38" y1="96.44" x2="459.38" y2="45.46" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+</svg>

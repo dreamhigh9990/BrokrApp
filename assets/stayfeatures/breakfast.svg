@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M45.69,372H480.67c4.97,0,9.01,4.04,9.01,9.01h0c0,13.67-11.1,24.78-24.78,24.78H61.46c-13.67,0-24.78-11.1-24.78-24.78h0c0-4.97,4.04-9.01,9.01-9.01Z" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <line x1="302.13" y1="197.8" x2="276.84" y2="197.8" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <path d="M249.52,197.8H107.72c-.42,0-.84-.01-1.25-.04h-.03c-10.43-.67-18.76-9.41-18.76-20.01v-3.28c0-11.02,9.02-20.04,20.04-20.04H249.52" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M329.45,197.8h89.19c.42,0,.84-.01,1.25-.04h.03c10.43-.67,18.76-9.41,18.76-20.01v-3.28c0-11.02-9.02-20.04-20.04-20.04h-89.19" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="302.13" y1="154.43" x2="276.84" y2="154.43" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M328.6,327.63h90.04c.34,0,.69,0,1.03,.03,10.54,.54,19.01,9.33,19.01,20.01v3.29c0,11.02-9.02,20.04-20.04,20.04H107.72c-11.02,0-20.04-9.02-20.04-20.04v-3.29c0-10.68,8.47-19.47,19.01-20.01,.34-.02,.69-.03,1.03-.03h195.26" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <path d="M302.13,284.32H107.72c-.34,0-.69,.01-1.03,.03-10.54,.54-19.01,9.33-19.01,20.02v3.28c0,11.02,9.02,20.04,20.04,20.04h195.29" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <path d="M328.57,327.69h90.07c11.02,0,20.04-9.02,20.04-20.04v-3.28c0-10.69-8.47-19.48-19.01-20.02-.34-.02-.69-.03-1.03-.03h-89.19" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <line x1="302.13" y1="241.01" x2="276.84" y2="241.01" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <path d="M249.52,241.01H107.72c-.34,0-.69,.01-1.03,.03-10.54,.54-19.01,9.33-19.01,20.02v3.28c0,11.02,9.02,20.04,20.04,20.04h194.41" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <path d="M329.45,284.38h89.19c11.02,0,20.04-9.02,20.04-20.04v-3.28c0-10.69-8.47-19.48-19.01-20.02-.34-.02-.69-.03-1.03-.03h-89.19" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <path d="M329.45,197.71h89.19c.42,0,.84,.01,1.25,.05,.01-.01,.02-.01,.03,0,10.43,.66,18.76,9.4,18.76,19.99v3.28c0,10.69-8.47,19.47-19.01,20.01-.34,.02-.69,.03-1.03,.03h-89.19" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <path d="M249.52,241.07H107.72c-.34,0-.69-.01-1.03-.03-10.54-.54-19.01-9.32-19.01-20.01v-3.28c0-10.59,8.33-19.33,18.76-19.99,0-.01,.02-.01,.03,0,.41-.04,.83-.05,1.25-.05H249.52" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <line x1="302.13" y1="197.71" x2="276.84" y2="197.71" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <line x1="302.13" y1="241.07" x2="276.84" y2="241.07" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <path d="M249.52,154.52h-59.49c-.49,0-.97-.03-1.44-.09-5.93-.72-10.56-5.8-10.56-11.91v-22.82c0-6.6,5.4-12,12-12h146.3c6.6,0,12,5.4,12,12v22.82c0,6.11-4.63,11.19-10.55,11.91-.47,.06-.96,.09-1.45,.09h-6.88" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="302.13" y1="154.52" x2="276.84" y2="154.52" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M296.93,107.7c.64-2.63,.98-5.37,.98-8.2,0-19.18-15.55-34.73-34.73-34.73s-34.73,15.55-34.73,34.73c0,2.83,.34,5.57,.98,8.2" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <path d="M302.13,154.43v168.46c0,7.51,6.14,13.66,13.66,13.66s13.66-6.15,13.66-13.66V154.43" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M276.84,154.43v91.39c0,5.87-4.8,10.68-10.67,10.68h-5.98c-5.87,0-10.67-4.81-10.67-10.68v-91.39" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Indoor_fireplace" data-name="Indoor fireplace" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g>
+    <rect x="29.95" y="48.11" width="452.09" height="83.52" rx="35.56" ry="35.56" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 23.7px;"/>
+    <rect x="68.99" y="131.63" width="374.02" height="332.26" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 23.7px;"/>
+  </g>
+  <line x1="29.95" y1="463.89" x2="482.05" y2="463.89" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 23.7px;"/>
+  <path d="M253.2,226.04h5.6c49.06,0,88.89,39.83,88.89,88.89v148.96H164.31v-148.96c0-49.06,39.83-88.89,88.89-88.89Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 23.7px;"/>
+  <g>
+    <path d="M255.76,330.32l41.73,76.28c9.43,17.23,3.61,38.95-13.32,48.9-14.82,8.71-34.7,13.43-56.73-.05-16.55-10.12-22.27-31.43-13.05-48.5l41.37-76.63h0Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 23.7px;"/>
+    <path d="M255.91,411.27l16.44,30.05c3.71,6.79,1.42,15.34-5.25,19.26-5.84,3.43-13.67,5.29-22.35-.02-6.52-3.99-8.77-12.38-5.14-19.11l16.3-30.19h0Z" style="stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 9.34px;"/>
+  </g>
+</svg>

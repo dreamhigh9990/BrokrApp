@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M33.92,494.56H411.46" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <g>
+    <path d="M67.23,492.56V88.71c0-47.51,30.86-71.27,69.08-71.27h184.21c38.23,0,69.08,23.75,69.08,71.27V492.56H67.23Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.74px;"/>
+    <path d="M179.83,207.49h97.4c23.95,0,43.52-11.88,43.52-44.9v-29.22c0-33.02-19.58-44.9-43.52-44.9h-97.4c-23.95,0-43.52,11.88-43.52,44.9v29.22c0,33.02,19.58,44.9,43.52,44.9h0Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.74px;"/>
+    <path d="M136.3,278.75h69.08" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.74px;"/>
+    <path d="M389.6,350.26l103.62-.24V207.49l-46.06-23.75" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.74px;"/>
+  </g>
+</svg>

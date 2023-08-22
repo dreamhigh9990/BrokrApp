@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="gym" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g>
+    <path d="M100.52,125.97h5.4c12.48,0,22.61,10.13,22.61,22.61v223.58c0,11.91-9.67,21.58-21.58,21.58h-6.43c-11.91,0-21.58-9.67-21.58-21.58V147.55c0-11.91,9.67-21.58,21.58-21.58Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <path d="M44.44,162.88h11.98c10.62,0,19.24,8.62,19.24,19.24v156.33c0,10.14-8.23,18.37-18.37,18.37h-12.86c-10.14,0-18.37-8.23-18.37-18.37V181.25c0-10.14,8.23-18.37,18.37-18.37Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+  <g>
+    <path d="M405.05,118.26h6.43c11.91,0,21.58,9.67,21.58,21.58v223.58c0,12.48-10.13,22.61-22.61,22.61h-5.4c-11.91,0-21.58-9.67-21.58-21.58V139.84c0-11.91,9.67-21.58,21.58-21.58Z" transform="translate(816.53 504.29) rotate(-180)" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <path d="M454.71,155.17h12.86c10.14,0,18.37,8.23,18.37,18.37v156.33c0,10.62-8.62,19.24-19.24,19.24h-11.98c-10.14,0-18.37-8.23-18.37-18.37V173.54c0-10.14,8.23-18.37,18.37-18.37Z" transform="translate(922.27 504.29) rotate(-180)" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+  <line x1="128.53" y1="259.86" x2="383.47" y2="259.86" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+</svg>

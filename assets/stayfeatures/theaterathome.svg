@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="teatro_en_casa" data-name="teatro en casa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M213.62,307.58h92.77c11.04,0,20,8.96,20,20v167.4H193.62v-167.4c0-11.04,8.96-20,20-20Z" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <g>
+    <path d="M41.6,36.33H124.16c11.04,0,20,8.96,20,20V494.99H21.6V56.33c0-11.04,8.96-20,20-20Z" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    <circle cx="82.88" cy="124.89" r="39.76" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    <ellipse cx="82.88" cy="124.89" rx="4.24" ry="5.22" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    <ellipse cx="82.88" cy="213.89" rx="4.24" ry="5.22" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    <g>
+      <circle cx="82.88" cy="298.39" r="39.76" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+      <ellipse cx="82.88" cy="298.39" rx="4.24" ry="5.22" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    </g>
+    <line x1="57.09" y1="459.75" x2="109.95" y2="459.75" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+  <g>
+    <path d="M394.21,36.33h82.55c11.04,0,20,8.96,20,20V494.99h-122.55V56.33c0-11.04,8.96-20,20-20Z" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    <circle cx="435.49" cy="124.89" r="39.76" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    <ellipse cx="435.49" cy="124.89" rx="4.24" ry="5.22" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    <ellipse cx="435.49" cy="213.89" rx="4.24" ry="5.22" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    <g>
+      <circle cx="435.49" cy="298.39" r="39.76" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+      <ellipse cx="435.49" cy="298.39" rx="4.24" ry="5.22" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    </g>
+    <line x1="409.71" y1="459.75" x2="462.56" y2="459.75" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+  <rect x="221.79" y="334.35" width="78.8" height="78.8" rx="12" ry="12" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+</svg>

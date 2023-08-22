@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g>
+    <polyline points="142.14 394.58 278.93 258.55 409.83 392.85" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.67px;"/>
+    <path d="M25.05,392.85l99.01-98.15V152.65h69.74v95.57l80.06-85.64c5.01-5.36,13.53-5.34,18.52,.04l203.63,219.9" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.67px;"/>
+  </g>
+  <g>
+    <path d="M131.15,47.64c0,8.06-2.9,8.06-2.9,16.11s2.9,8.06,2.9,16.11-2.9,8.06-2.9,16.11" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 12px;"/>
+    <path d="M152.6,74.02c0,8.06-2.9,8.06-2.9,16.11s2.9,8.06,2.9,16.11-2.9,8.06-2.9,16.11" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 12px;"/>
+    <path d="M174.05,49.85c0,8.06-2.9,8.06-2.9,16.11s2.9,8.06,2.9,16.11-2.9,8.06-2.9,16.11" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 12px;"/>
+  </g>
+</svg>

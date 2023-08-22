@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M130.35,193.27h251.3v146.48c0,16.63-6.61,32.59-18.37,44.35s-27.71,18.37-44.35,18.37h-125.65c-16.63,0-32.58-6.61-44.35-18.37-11.76-11.76-18.37-27.71-18.37-44.35V193.27h-.21Z" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <path d="M297.88,402.48h-83.77v83.77h83.77v-83.77Z" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <path d="M360.82,25.75H151.4V193.28h209.42V25.75Z" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <path d="M214.12,88.47v41.88" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <path d="M297.88,88.47v41.88" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  <polyline id="primary-2" points="253.9 345.34 277.64 297.87 230.17 297.87 253.9 250.4" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+</svg>

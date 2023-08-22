@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Kitchen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M32.46,60.59h124.23v103.34H32.46c-6.87,0-12.45-5.58-12.45-12.45V73.04c0-6.87,5.58-12.45,12.45-12.45Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.75px;"/>
+  <path d="M355.11,60.59h124.23c6.87,0,12.45,5.58,12.45,12.45v78.44c0,6.87-5.58,12.45-12.45,12.45h-124.23V60.59h0Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.75px;"/>
+  <line x1="32.66" y1="60.59" x2="479.54" y2="60.59" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.75px;"/>
+  <rect x="20.21" y="250.81" width="471.78" height="200.61" rx="12.45" ry="12.45" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.75px;"/>
+  <line x1="156.89" y1="250.81" x2="156.89" y2="451.41" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.75px;"/>
+  <line x1="355.04" y1="250.81" x2="355.04" y2="451.41" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.75px;"/>
+  <line x1="156.89" y1="305.9" x2="355.31" y2="305.9" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.75px;"/>
+  <line x1="73.52" y1="138.87" x2="103.18" y2="138.87" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.75px;"/>
+  <line x1="408.62" y1="138.87" x2="438.28" y2="138.87" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.75px;"/>
+  <line x1="73.52" y1="285.15" x2="103.18" y2="285.15" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.75px;"/>
+  <line x1="408.62" y1="285.15" x2="438.28" y2="285.15" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.75px;"/>
+  <polyline points="221.85 62.93 221.85 84.12 179.69 151.94 331.62 151.94 283.45 84.12 283.45 62.93" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20.75px;"/>
+</svg>

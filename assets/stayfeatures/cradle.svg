@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Cradle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g>
+    <g>
+      <path d="M66.23,191.25H445.77v190.85c0,15.5-12.58,28.08-28.08,28.08H94.31c-15.5,0-28.08-12.58-28.08-28.08V191.25h0Z" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+      <path d="M107.34,410.18h26.77v30.27c0,4.16-3.38,7.54-7.54,7.54h-11.7c-4.16,0-7.54-3.38-7.54-7.54v-30.27h0Z" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+      <path d="M385.36,410.18h26.77v30.27c0,4.16-3.38,7.54-7.54,7.54h-11.7c-4.16,0-7.54-3.38-7.54-7.54v-30.27h0Z" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+      <path d="M66.23,191.25V123.59c0-7.89-4.15-15.36-11.12-19.06s-15.96-3.59-25.64,10.76" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+      <path d="M445.77,191.79V124.13c0-7.89,4.15-15.36,11.12-19.06,6.77-3.59,15.96-3.59,25.64,10.76" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    </g>
+    <line x1="128.72" y1="191.25" x2="128.72" y2="403.56" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    <line x1="179.72" y1="191.25" x2="179.72" y2="403.56" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    <line x1="230.72" y1="191.25" x2="230.72" y2="403.56" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    <line x1="281.72" y1="191.25" x2="281.72" y2="403.56" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    <line x1="332.72" y1="191.25" x2="332.72" y2="403.56" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+    <line x1="383.72" y1="191.25" x2="383.72" y2="403.56" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 20px;"/>
+  </g>
+  <g>
+    <path d="M170.15,64.02v4.36l-23.06,38.81h21.34v4.82h-36.74v-4.82l22.78-38.36h-19.51v-4.82h35.19Z"/>
+    <path d="M233.72,108.44v4.36l-23.06,38.81h21.34v4.82h-36.74v-4.82l22.78-38.36h-19.51v-4.82h35.19Z"/>
+  </g>
+</svg>

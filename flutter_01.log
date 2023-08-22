@@ -1,0 +1,102 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --machine --start-paused -d emulator-5554 --devtools-server-address http://127.0.0.1:9100/ --target lib\main.dart
+
+## exception
+
+TlsException: TlsException: 
+	BAD_DECRYPT(../../third_party/boringssl/src/crypto/cipher_extra/e_chacha20poly1305.c:261)
+	DECRYPTION_FAILED_OR_BAD_RECORD_MAC(../../third_party/boringssl/src/ssl/tls_record.cc:298) error 503316581
+
+```
+#0      new _HttpClientConnection.<anonymous closure> (dart:_http/http_impl.dart:2086:9)
+#1      _rootRunBinary (dart:async/zone.dart:1422:47)
+#2      _CustomZone.runBinary (dart:async/zone.dart:1314:19)
+#3      _CustomZone.runBinaryGuarded (dart:async/zone.dart:1224:7)
+#4      _BufferingStreamSubscription._sendError.sendError (dart:async/stream_impl.dart:358:15)
+#5      _BufferingStreamSubscription._sendError (dart:async/stream_impl.dart:376:7)
+#6      _BufferingStreamSubscription._addError (dart:async/stream_impl.dart:280:7)
+#7      _SyncStreamControllerDispatch._sendError (dart:async/stream_controller.dart:778:19)
+#8      _StreamController._addError (dart:async/stream_controller.dart:656:7)
+#9      _StreamController.addError (dart:async/stream_controller.dart:610:5)
+#10     _rootRunBinary (dart:async/zone.dart:1422:47)
+#11     _CustomZone.runBinary (dart:async/zone.dart:1314:19)
+#12     _CustomZone.runBinaryGuarded (dart:async/zone.dart:1224:7)
+#13     _BufferingStreamSubscription._sendError.sendError (dart:async/stream_impl.dart:358:15)
+#14     _BufferingStreamSubscription._sendError (dart:async/stream_impl.dart:376:7)
+#15     _BufferingStreamSubscription._addError (dart:async/stream_impl.dart:280:7)
+#16     _SyncStreamControllerDispatch._sendError (dart:async/stream_controller.dart:778:19)
+#17     _StreamController._addError (dart:async/stream_controller.dart:656:7)
+#18     _StreamController.addError (dart:async/stream_controller.dart:610:5)
+#19     _Socket._onError (dart:io-patch/socket_patch.dart:2378:19)
+#20     _rootRunBinary (dart:async/zone.dart:1422:47)
+#21     _CustomZone.runBinary (dart:async/zone.dart:1314:19)
+#22     _CustomZone.runBinaryGuarded (dart:async/zone.dart:1224:7)
+#23     _BufferingStreamSubscription._sendError.sendError (dart:async/stream_impl.dart:358:15)
+#24     _BufferingStreamSubscription._sendError (dart:async/stream_impl.dart:373:9)
+#25     _BufferingStreamSubscription._addError (dart:async/stream_impl.dart:280:7)
+#26     _SyncStreamControllerDispatch._sendError (dart:async/stream_controller.dart:778:19)
+#27     _StreamController._addError (dart:async/stream_controller.dart:656:7)
+#28     _StreamController.addError (dart:async/stream_controller.dart:610:5)
+#29     _RawSecureSocket._reportError (dart:io/secure_socket.dart:883:19)
+#30     _RawSecureSocket._pushAllFilterStages (dart:io/secure_socket.dart:1150:9)
+<asynchronous suspension>
+#31     _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1001:25)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[!] Flutter (Channel stable, 3.7.8, on Microsoft Windows [Versi¢n 10.0.19045.3324], locale es-ES)
+    • Flutter version 3.7.8 on channel stable at E:\flutter\SDKS\3.7.8
+    ! Warning: `flutter` on your path resolves to E:\flutter\SDKS\3.3.5\flutter\bin\flutter, which is not inside your current Flutter SDK checkout at E:\flutter\SDKS\3.7.8. Consider adding E:\flutter\SDKS\3.7.8\bin to the front of your path.
+    ! Warning: `dart` on your path resolves to E:\flutter\SDKS\3.3.5\flutter\bin\dart, which is not inside your current Flutter SDK checkout at E:\flutter\SDKS\3.7.8. Consider adding E:\flutter\SDKS\3.7.8\bin to the front of your path.
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 90c64ed42b (5 months ago), 2023-03-21 11:27:08 -0500
+    • Engine revision 9aa7816315
+    • Dart version 2.19.5
+    • DevTools version 2.20.1
+    • If those were intentional, you can disregard the above warnings; however it is recommended to use "git" directly to perform update checks and upgrades.
+
+[✗] Windows Version (Unable to confirm if installed Windows version is 10 or greater)
+
+[!] Android toolchain - develop for Android devices (Android SDK version 33.0.0)
+    • Android SDK at C:\Users\Zafiro\AppData\Local\Android\sdk
+    ✗ cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/windows#android-setup for more details.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✗] Visual Studio - develop for Windows
+    ✗ Visual Studio not installed; this is necessary for Windows development.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+
+[✓] Android Studio (version 2021.3)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.13+0-b1751.21-8125866)
+
+[✓] Connected device (4 available)
+    • sdk gphone x86 (mobile) • emulator-5554 • android-x86    • Android 11 (API 30) (emulator)
+    • Windows (desktop)       • windows       • windows-x64    • Microsoft Windows [Versi¢n 10.0.19045.3324]
+    • Chrome (web)            • chrome        • web-javascript • Google Chrome 113.0.5672.94
+    • Edge (web)              • edge          • web-javascript • Microsoft Edge 114.0.1823.51
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+! Doctor found issues in 4 categories.
+```

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Terrace" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g>
+    <rect x="391.29" y="392.84" width="95.85" height="26.98" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <path d="M384.28,365.05h102.87v27.79h-103.45c-6.18,0-11.21-5.02-11.21-11.21v-4.8c0-6.5,5.28-11.79,11.79-11.79Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <line x1="391.29" y1="419.82" x2="391.29" y2="470.67" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <line x1="487.14" y1="419.82" x2="487.14" y2="470.67" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <line x1="487.14" y1="365.05" x2="495.93" y2="237.8" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+  <g>
+    <rect x="24.86" y="392.84" width="95.85" height="26.98" transform="translate(145.56 812.67) rotate(-180)" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <path d="M36.06,365.05h103.45v27.79H36.64c-6.5,0-11.79-5.28-11.79-11.79v-4.8c0-6.18,5.02-11.21,11.21-11.21Z" transform="translate(164.36 757.89) rotate(-180)" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <line x1="120.71" y1="419.82" x2="120.71" y2="470.67" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <line x1="24.86" y1="419.82" x2="24.86" y2="470.67" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <line x1="24.86" y1="365.05" x2="16.07" y2="237.8" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+  <line x1="251.42" y1="299.45" x2="251.42" y2="144.43" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="251.42" y1="436.64" x2="251.42" y2="335.24" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="251.42" y1="472.64" x2="236.53" y2="472.64" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <polyline points="218.26 472.64 236.53 472.64 251.42 472.64 266.31 472.64 284.59 472.64" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <path d="M266.31,472.64c.04-.27,.05-.56,.05-.84v-24.24c0-6.01-5.55-10.93-12.33-10.93h-5.22c-6.78,0-12.33,4.92-12.33,10.93v24.24c0,.28,0,.57,.05,.84" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <polygon points="251.42 133.37 51.22 133.37 151.32 86.36 251.42 39.36 351.53 86.36 451.63 133.37 251.42 133.37" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <polygon points="251.42 126.49 164.93 126.49 208.18 86.36 251.42 46.24 294.67 86.36 337.91 126.49 251.42 126.49" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <g>
+    <rect x="132.86" y="301.42" width="237.12" height="31.84" rx="13.6" ry="13.6" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <line x1="109.7" y1="301.42" x2="391.29" y2="301.42" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="hot_iron" data-name="hot iron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M124.64,242.08c9.94,7.18,16.4,18.87,16.4,32.07,0,21.84-17.71,39.56-39.56,39.56-14.51,0-27.19-7.82-34.08-19.47" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="36.59" y1="363.6" x2="498.74" y2="363.65" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <line x1="32.78" y1="401.55" x2="13.26" y2="401.55" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  <g>
+    <path d="M224.12,210.22h243.94c16.93,0,30.67,13.74,30.67,30.67v129.99c0,16.93-13.74,30.67-30.67,30.67H32.78c0-105.6,85.73-191.33,191.33-191.33Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <path d="M241.95,260.1h183.44c6.99,0,12.67,5.68,12.67,12.67v33.09c0,6.99-5.68,12.67-12.67,12.67H208.86c-6.99,0-12.67-5.68-12.67-12.67h0c0-25.26,20.51-45.76,45.76-45.76Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+    <line x1="498.74" y1="260.1" x2="498.74" y2="110.45" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;"/>
+  </g>
+</svg>
