@@ -1,6 +1,4 @@
-import 'package:brokr/utils/theme_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../widgets/text_align_left_widget.dart';
 
@@ -12,7 +10,7 @@ class PriceDetailsCarWidget extends StatelessWidget {
     return Column(
       children: [
         const SizedBox(
-          height: 5.0,
+          height: 20.0,
         ),
         TextAlignLeft(
           title: "Price Details",
@@ -74,55 +72,27 @@ class PriceDetailsCarWidget extends StatelessWidget {
           height: 15.0,
         ),
         Row(
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "Included miles 300",
-                  style: TextStyle(fontSize: 12.0),
-                ),
-                Text(
-                  "You’ll be charged (\$5) for each extra mile over the amount included",
-                  style: TextStyle(fontSize: 06.sp),
-                )
-              ],
+          children: const [
+            Text(
+              "Included miles 300",
+              style: TextStyle(fontSize: 12.0),
             ),
-            const Spacer(),
-            const Text("FREE", style: TextStyle(fontSize: 12.0))
+            Spacer(),
+            Text("FREE", style: TextStyle(fontSize: 12.0))
           ],
         ),
         const SizedBox(
-          height: 15.0,
-        ),
-        ThemeUtils.dividerGrey,
-        const SizedBox(
-          height: 15.0,
+          height: 30.0,
         ),
         Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children:  [
-         const   Text(
+          children: const [
+            Text(
               "Total (USD)",
               style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
             ),
-          const  Spacer(),
-              Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                const Text(
-                  "\$3,145.80",
-                  style: TextStyle(fontSize: 12.0),
-                ),
-           const     SizedBox(height: 5.0,),
-                Text(
-                  "More info",
-                  style: TextStyle(fontSize: 12.sp,color: Colors.black,fontWeight: FontWeight.bold,decoration: TextDecoration.underline),
-                )
-              ],
-            ),
-
-          
+            Spacer(),
+            Text("\$3,142.80",
+                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold))
           ],
         ),
         const SizedBox(
@@ -132,6 +102,7 @@ class PriceDetailsCarWidget extends StatelessWidget {
     );
   }
 }
+
 
 class PriceDetailsStayWidget extends StatelessWidget {
   const PriceDetailsStayWidget({super.key});
@@ -189,6 +160,8 @@ class PriceDetailsStayWidget extends StatelessWidget {
         const SizedBox(
           height: 15.0,
         ),
+      
+       
         Row(
           children: const [
             Text(
@@ -196,7 +169,7 @@ class PriceDetailsStayWidget extends StatelessWidget {
               style: TextStyle(fontSize: 12.0),
             ),
             Spacer(),
-            Text("\$1,910.00", style: TextStyle(fontSize: 12.0))
+                 Text("\$1,910.00", style: TextStyle(fontSize: 12.0))
           ],
         ),
         const SizedBox(

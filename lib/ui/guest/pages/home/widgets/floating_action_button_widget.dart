@@ -19,9 +19,7 @@ class FloatingActionButtonCustom extends StatelessWidget {
       () => Container(
         height: 50,
         width: 200,
-        margin: EdgeInsets.only(
-            bottom:
-                controller.showMap.value ? Get.context!.height * 0.2250 : 16),
+        margin: EdgeInsets.only(bottom: controller.showMap.value ? Get.context!.height * 0.2250 : 16),
         decoration: BoxDecoration(
           color: ThemeUtils.colorPurple,
           borderRadius: const BorderRadius.all(
@@ -35,8 +33,9 @@ class FloatingActionButtonCustom extends StatelessWidget {
                 onTap: () {
                   controller.showMap.value = !controller.showMap.value;
 
+                  
                   controller.changeBottombar();
-                 // controller.updateScreen();
+                  controller.updateScreen();
                   if (controller.showMap.value == false) {
                     controller.mapController!
                         .animateCamera(CameraUpdate.zoomIn());

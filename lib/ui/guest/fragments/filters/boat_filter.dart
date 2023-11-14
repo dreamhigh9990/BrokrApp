@@ -3,13 +3,13 @@
 import 'package:brokr/ui/guest/fragments/filters/widgets/bottom_bar_widget.dart';
 import 'package:brokr/ui/guest/fragments/filters/widgets/row_checkbox_widget.dart';
 import 'package:brokr/ui/guest/fragments/filters/widgets/row_list_widget.dart';
+import 'package:brokr/ui/widgets/aux_dropdown.dart';
 import 'package:brokr/ui/widgets/money_chart_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../../utils/list_utils_filter.dart';
 import '../../../../utils/theme_utils.dart';
+import '../../../widgets/normal_button.dart';
 import '../../../widgets/tiles/amenities_tile_widget.dart';
-import '../../pages/home/guest_home_controller.dart';
 import 'widgets/header_filter_widget.dart';
 
 class FilterBoatWidget extends StatefulWidget {
@@ -20,7 +20,6 @@ class FilterBoatWidget extends StatefulWidget {
 }
 
 class _FilterBoatWidgetState extends State<FilterBoatWidget> {
-    final GuestHomeController guestHomeController = Get.find();
   String? dropDownValue1;
   double? sliderValue;
   String? dropDownValue2;
@@ -40,174 +39,109 @@ class _FilterBoatWidgetState extends State<FilterBoatWidget> {
       letterSpacing: 0.5);
   List<AmenitiesTieWidget> sampleAmenities = [
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Jacuzzy',
       iconPath: "assets/boatfeatures/jacuzzy.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Red Wine',
       iconPath: "assets/boatfeatures/red_wine.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
       amenitie: 'WiFi',
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       iconPath: "assets/boatfeatures/wifi.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Pets',
       iconPath: "assets/boatfeatures/pets.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Swimming',
       iconPath: "assets/boatfeatures/swim.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Alcohol',
       iconPath: "assets/boatfeatures/alcohol.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Bed Count',
       iconPath: "assets/boatfeatures/bed.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Shoes',
       iconPath: "assets/boatfeatures/shoes.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Fishing',
       iconPath: "assets/boatfeatures/fishing.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Snorkeling Gear',
       iconPath: "assets/boatfeatures/snork.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Jet Ski',
       iconPath: "assets/boatfeatures/jetski.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Fish Finder',
       iconPath: "assets/boatfeatures/fish.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Paddleboards',
       iconPath: "assets/boatfeatures/paddleboards.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Fishing Gear',
       iconPath: "assets/boatfeatures/fishing_gear.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Rod Holders',
       iconPath: "assets/boatfeatures/rod_holders.svg",
       color: Colors.black,
     ),
     AmenitiesTieWidget(
-      height: 25,
-      width: 25,
-      fontSizeText: 06,
       amenitie: 'Anchor',
       iconPath: "assets/boatfeatures/anchor.svg",
       color: Colors.black,
     ),
   ];
-  int size = 0;
-
-  bool valuePolicy = false;
-
-  String sorby = ListUtilFilter.sortby[0];
-  String makes = ListUtilFilter.makesBoats[0];
-  String years = ListUtilFilter.years[0];
-  String boats = ListUtilFilter.lengthBoats[0];
-  String boatsType = ListUtilFilter.boatsType[0];
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
         top: Get.context!.height * 0.02,
+        bottom: Get.context!.height * 0.02,
       ),
       child: Column(
         children: [
-          HeaderTitleBar(title: "Filter ", size: size),
           Expanded(
-            flex: 10,
+            child: HeaderTitleBar(title: "Filter Boats"),
+          ),
+          Expanded(
+            flex: 7,
             child: Container(
-              padding: EdgeInsets.only(
-                left: Get.context!.width * 0.05,
-                right: Get.context!.width * 0.05,
-              ),
+              //  color: Colors.green.shade100,
               child: ListView(
-                  padding: EdgeInsets.zero,
                   physics: const BouncingScrollPhysics(),
                   shrinkWrap: true,
                   children: [
-                    CustomRowWidget(
-                      title: "Sort by",
-                      hintText: sorby,
-                      options: ListUtilFilter.sortby,
-                      refresh: (String value) {
-                        sorby = value;
-                        setState(() {});
-                      },
-                    ),
+                    const CustomRowWidget(
+                        title: "Sort by", hintText: "Relevance"),
                     const SizedBox(
                       height: 20.0,
                     ),
@@ -225,69 +159,33 @@ class _FilterBoatWidgetState extends State<FilterBoatWidget> {
                     const SizedBox(
                       height: 20.0,
                     ),
-                    CustomRowWidget(
-                      title: "Make",
-                      hintText: makes,
-                      options: ListUtilFilter.makesBoats,
-                      refresh: (String value) {
-                        makes = value;
-                        setState(() {});
-                      },
-                    ),
+                    const CustomRowWidget(title: "Make", hintText: "All makes"),
                     const SizedBox(
                       height: 10.0,
                     ),
-                    CustomRowWidget(
-                      title: "Years",
-                      hintText: years,
-                      options: ListUtilFilter.years,
-                      refresh: (String value) {
-                        years = value;
-                        setState(() {});
-                      },
-                    ),
+                    const CustomRowWidget(
+                        title: "Years", hintText: "All years"),
                     const SizedBox(
                       height: 10.0,
                     ),
-                    CustomRowWidget(
-                      title: "Lenght",
-                      hintText: boats,
-                      options: ListUtilFilter.lengthBoats,
-                      refresh: (String value) {
-                        boats = value;
-                        setState(() {});
-                      },
-                    ),
+                    const CustomRowWidget(
+                        title: "Lenght", hintText: "All Lenght"),
                     const SizedBox(
                       height: 10.0,
                     ),
-                    CustomRowWidget(
-                      title: "Boats type",
-                      hintText: boatsType,
-                      options: ListUtilFilter.boatsType,
-                      refresh: (String value) {
-                        boatsType = value;
-                        setState(() {});
-                      },
-                    ),
+                    const CustomRowWidget(
+                        title: "Boats type", hintText: "All types"),
                     const SizedBox(
                       height: 10.0,
                     ),
-                    RowCheckBoxWidget(
-                      title: "Free cancelation policy",
-                      value: valuePolicy,
-                      function: (bool value) {
-                        valuePolicy = value;
-                        setState(() {});
-                      },
-                    ),
+                    const RowCheckBoxWidget(title: "Free cancelation policy"),
                     const SizedBox(
                       height: 10.0,
                     ),
                     const Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        'Features & Amenities',
+                        'Features',
                         style: TextStyle(
                             color: Color(0xFF505050),
                             fontWeight: FontWeight.bold,
@@ -305,57 +203,17 @@ class _FilterBoatWidgetState extends State<FilterBoatWidget> {
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
                         childAspectRatio: 1.05,
-                        crossAxisCount: 3,
+                        crossAxisCount: 4,
                       ),
                       itemBuilder: (BuildContext context, int position) {
-                        return AmenitiesTieWidget(
-                            height: 25,
-                            width: 25,
-                            fontSizeText: 10,
-                            pressed: sampleAmenities[position].pressed,
-                            color: const Color(0xFF1E161A),
-                            onChanged: () {
-                              setState(() {
-                                sampleAmenities[position].pressed =
-                                    !sampleAmenities[position].pressed;
-
-                                if (sampleAmenities[position].pressed == true) {
-                                  size++;
-                                } else {
-                                  size--;
-                                }
-                              });
-
-                              //title_stays
-                            },
-                            amenitie: sampleAmenities[position].amenitie,
-                            iconPath: sampleAmenities[position].iconPath);
+                        return GestureDetector(
+                            onTap: () {}, child: sampleAmenities[position]);
                       },
                     ),
                   ]),
             ),
           ),
-          FilterBottomBarWidget(
-               title: "Show 100 boats",
-            callbackReset: () {
-              for (var i = 0; i < sampleAmenities.length; i++) {
-                sampleAmenities[i].pressed = false;
-              }
-
-              valuePolicy = false;
-              size = 0;
-              sorby = ListUtilFilter.sortby[0];
-              makes = ListUtilFilter.makes[0];
-              years = ListUtilFilter.years[0];
-              boats = ListUtilFilter.lengthBoats[0];
-              boatsType = ListUtilFilter.boatsType[0];
-              setState(() {});
-            },
-            save: () {
-                guestHomeController.changeBottombar();
-              Get.back();
-            },
-          ),
+          const FilterBottomBarWidget(),
         ],
       ),
     );

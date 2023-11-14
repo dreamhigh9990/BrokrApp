@@ -23,77 +23,42 @@ class _GuessWidgetState extends State<GuessWidget> {
     return SafeArea(
       child: Column(
         children: [
-          HeaderBarWidget(title: "Who"),
-          Expanded(
-            child: Container(
-              padding: EdgeInsets.only(
-                  left: Get.context!.width * 0.05,
-                  right: Get.context!.width * 0.05,
-                  top: 10.0,
-                  bottom: 10.0),
-              decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(15.0),
-                      topRight: Radius.circular(15.0))),
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    customRow("Adults", "Age 13+", countAdults, addAdult,
-                        removeAdult, "assets/icons/adult.svg"),
-                    const SizedBox(
-                      height: 10.0,
-                    ),
-                    ThemeUtils.dividerGrey,
-                    const SizedBox(
-                      height: 10.0,
-                    ),
-                    customRow("Infants", "Under 2", countInfants, addInfants,
-                        removeInfants, "assets/icons/children.svg"),
-                    const SizedBox(
-                      height: 10.0,
-                    ),
-                    ThemeUtils.dividerGrey,
-                    const SizedBox(
-                      height: 10.0,
-                    ),
-                    customRow("Children", "Age 2-12", countChildrens,
-                        addChildren, removeChildren, "assets/icons/infant.svg"),
-                    const SizedBox(
-                      height: 10.0,
-                    ),
-                    ThemeUtils.dividerGrey,
-                    const SizedBox(
-                      height: 10.0,
-                    ),
-                    customRow("Pets", "Brining a service animal?", countPets,
-                        addPet, removePets, "assets/icons/pet.svg"),
-                    const Spacer(),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        left: Get.context!.width * 0.025,
-                        right: Get.context!.width * 0.025,
-                      ),
-                      child: NormalButton(
-                        backgroundColor: ThemeUtils.colorPurple,
-                        text: 'Save',
-                        onTap: () {
-                          Get.back(
-                            result: {
-
-                              "response": "Adults $countAdults, Infants $countInfants, Children $countChildrens, Pets $countPets"
-                            }
-                          );
-                        },
-                        cornersRadius: 8,
-                      ),
-                    ),
-                  const  SizedBox(
-                      height: 10,
-                    ),
-                  ]),
-            ),
+          const HeaderBarWidget(title: "Who"),
+          const SizedBox(
+            height: 20.0,
+          ),
+          Container(
+            height: Get.context!.height * 0.85,
+            padding: EdgeInsets.only(
+                left: Get.context!.width * 0.05,
+                right: Get.context!.width * 0.05,
+                top: 10.0,
+                bottom: 10.0),
+            decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(15.0),
+                    topRight: Radius.circular(15.0))),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  customRow("Adults", "Age 13+", countAdults, addAdult,
+                      removeAdult, "assets/icons/adult.svg"),
+                  customRow("Infants", "Under 2", countInfants, addInfants,
+                      removeInfants, "assets/icons/children.svg"),
+                  customRow("Children", "Age 2-12", countChildrens,
+                      addChildren, removeChildren, "assets/icons/infant.svg"),
+                  customRow("Pets", "Brining a service animal?", countPets,
+                      addPet, removePets, "assets/icons/pet.svg"),
+                 const Spacer(),
+                  NormalButton(
+                    backgroundColor: ThemeUtils.colorPurple,
+                    text: 'Save',
+                    onTap: () {},
+                    cornersRadius: 8,
+                  ),
+                ]),
           )
         ],
       ),
@@ -106,10 +71,8 @@ class _GuessWidgetState extends State<GuessWidget> {
   }
 
   void removeAdult() {
-    if (countAdults != 0) {
-      countAdults--;
-      setState(() {});
-    }
+    countAdults--;
+    setState(() {});
   }
 
   void addInfants() {
@@ -118,10 +81,8 @@ class _GuessWidgetState extends State<GuessWidget> {
   }
 
   void removeInfants() {
-    if (countInfants != 0) {
-      countInfants--;
-      setState(() {});
-    }
+    countInfants--;
+    setState(() {});
   }
 
   void addChildren() {
@@ -130,10 +91,8 @@ class _GuessWidgetState extends State<GuessWidget> {
   }
 
   void removeChildren() {
-    if (countChildrens != 0) {
-      countChildrens--;
-      setState(() {});
-    }
+    countChildrens--;
+    setState(() {});
   }
 
   void addPet() {
@@ -142,10 +101,8 @@ class _GuessWidgetState extends State<GuessWidget> {
   }
 
   void removePets() {
-    if (countPets != 0) {
-      countPets--;
-      setState(() {});
-    }
+    countPets--;
+    setState(() {});
   }
 
   Widget customRow(String title, String subtitle, int value, Function add,

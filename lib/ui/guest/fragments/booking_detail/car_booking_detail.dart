@@ -1,14 +1,11 @@
 import 'package:brokr/models/super_model.dart';
-import 'package:brokr/ui/guest/fragments/booking_detail/widgets/bottom_bar_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import '../../../../models/crew_member_model.dart';
 import '../../../../models/policy_model.dart';
 import '../../../widgets/booking_detail/car_booking_widget.dart';
 import '../../../widgets/tiles/amenities_tile_widget.dart';
 import '../../../widgets/tiles/characteristics_widget.dart';
 import '../../../widgets/tiles/review_tile_widget.dart';
-import '../request_to_book/car_request_book_page.dart';
 
 class CarBookingDetail extends StatefulWidget {
   final SuperModel superModel;
@@ -29,7 +26,6 @@ class _CarBookingDetail extends State<CarBookingDetail> {
       'https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=1200');
   List<AmenitiesTieWidget> sampleAmenities = [
     AmenitiesTieWidget(
-        fontSizeText: 10,
         amenitie: 'Gas Tipe',
         iconPath: 'assets/carfeatures/gasstation.svg',
         height: 25,
@@ -37,28 +33,27 @@ class _CarBookingDetail extends State<CarBookingDetail> {
         color: Colors.black),
     AmenitiesTieWidget(
         amenitie: 'gastank mpg',
-        fontSizeText: 10,
-        iconPath: 'assets/carfeatures/gastankmpg.svg',
+    iconPath: 'assets/carfeatures/gastankmpg.svg',
         height: 25,
         width: 25,
         color: Colors.black),
     AmenitiesTieWidget(
         amenitie: 'Car dor',
-        fontSizeText: 10,
-        iconPath: 'assets/carfeatures/cardoor.svg',
+     iconPath: 'assets/carfeatures/cardoor.svg',
         height: 25,
         width: 25,
         color: Colors.black),
     AmenitiesTieWidget(
-        fontSizeText: 10,
         amenitie: '2 Seats',
-        iconPath: 'assets/carfeatures/childseatsecurity.svg',
+       iconPath: 'assets/carfeatures/childseatsecurity.svg',
         height: 25,
         width: 25,
         color: Colors.black),
   ];
 
-  List<ReviewTileHorizontalWidget> sampleReviews = [
+
+
+  List<ReviewTileHorizontalWidget> sampleReviews =  [
     ReviewTileHorizontalWidget(
         name: 'Raymond',
         text:
@@ -81,134 +76,142 @@ class _CarBookingDetail extends State<CarBookingDetail> {
 
   List<CharactersticsWidget> sampleCharacteristics = const [
     CharactersticsWidget(
-      amenitie: 'Wheelchair Accesible',
-      iconPath: "assets/carfeatures/wheelchair.svg",
-      value: "0",
-    ),
+    
+        amenitie: 'Wheelchair Accesible',
+        iconPath: "assets/carfeatures/wheelchair.svg",
+        value: "0",
+       ),
     CharactersticsWidget(
-      amenitie: 'All Wheel Drive',
-      value: "0.0",
-      iconPath: "assets/carfeatures/allwheeldrive.svg",
-    ),
+        amenitie: 'All Wheel Drive',
+          value: "0.0",
+        iconPath: "assets/carfeatures/allwheeldrive.svg",
+        ),
     CharactersticsWidget(
-      amenitie: 'Android Auto',
-      value: "0.0",
-      iconPath: "assets/carfeatures/androidauto.svg",
-    ),
+        amenitie: 'Android Auto',
+          value: "0.0",
+        iconPath: "assets/carfeatures/androidauto.svg",
+        ),
     CharactersticsWidget(
-      amenitie: 'Apple Car Play',
-      value: "0.0",
-      iconPath: "assets/carfeatures/applecarplay.svg",
-    ),
+        amenitie: 'Apple Car Play',
+          value: "0.0",
+        iconPath: "assets/carfeatures/applecarplay.svg",
+       ),
     CharactersticsWidget(
-      amenitie: 'AUX Input',
-      iconPath: "assets/carfeatures/auximput.svg",
-      value: "0.0",
-    ),
+        amenitie: 'AUX Input',
+        iconPath: "assets/carfeatures/auximput.svg",
+          value: "0.0",
+        ),
     CharactersticsWidget(
-      amenitie: 'Backup Camera',
-      iconPath: "assets/carfeatures/backupcamera.svg",
-      value: "0.0",
-    ),
+        amenitie: 'Backup Camera',
+        iconPath: "assets/carfeatures/backupcamera.svg",
+          value: "0.0",
+        ),
     CharactersticsWidget(
-      amenitie: 'Bike Rack',
-      iconPath: "assets/carfeatures/bikerack.svg",
-      value: "0.0",
-    ),
+        amenitie: 'Bike Rack',
+        iconPath: "assets/carfeatures/bikerack.svg",
+          value: "0.0",
+        ),
     CharactersticsWidget(
-      amenitie: 'Blind Spot Warning',
-      value: "0.0",
-      iconPath: "assets/carfeatures/blindspotwarning.svg",
-    ),
+        amenitie: 'Blind Spot Warning',
+          value: "0.0",
+        iconPath: "assets/carfeatures/blindspotwarning.svg",
+        ),
     CharactersticsWidget(
-      amenitie: 'Bluetooth',
-      value: "0.0",
-      iconPath: "assets/carfeatures/bluetooth.svg",
-    ),
+        amenitie: 'Bluetooth',
+          value: "0.0",
+        iconPath: "assets/carfeatures/bluetooth.svg",
+        ),
     CharactersticsWidget(
-      amenitie: 'Child Seat',
-      value: "0.0",
-      iconPath: "assets/carfeatures/childseatsecurity.svg",
-    ),
+        amenitie: 'Child Seat',
+          value: "0.0",
+        iconPath: "assets/carfeatures/childseatsecurity.svg",
+        ),
     CharactersticsWidget(
-      amenitie: 'Convertible',
-      value: "0.0",
-      iconPath: "assets/carfeatures/convertible.svg",
-    ),
+        amenitie: 'Convertible',
+          value: "0.0",
+        iconPath: "assets/carfeatures/convertible.svg",
+        ),
     CharactersticsWidget(
-      amenitie: 'GPS',
-      value: "0.0",
-      iconPath: "assets/carfeatures/gps.svg",
-    ),
+        amenitie: 'GPS',
+          value: "0.0",
+        iconPath: "assets/carfeatures/gps.svg",
+        ),
     CharactersticsWidget(
-      amenitie: 'Heated Seats',
-      value: "0.0",
-      iconPath: "assets/carfeatures/heatedseats.svg",
-    ),
+        amenitie: 'Heated Seats',  value: "0.0",
+        iconPath: "assets/carfeatures/heatedseats.svg",
+        ),
     CharactersticsWidget(
-      amenitie: 'Ventilated Seat',
-      value: "0.0",
-      iconPath: "assets/carfeatures/ventilatedseat.svg",
-    ),
+        amenitie: 'Ventilated Seat',  value: "0.0",
+        iconPath: "assets/carfeatures/ventilatedseat.svg",
+       ),
     CharactersticsWidget(
-      amenitie: 'Pet Friendly',
-      value: "0.0",
-      iconPath: "assets/carfeatures/petfriendly.svg",
-    ),
+        amenitie: 'Pet Friendly',  value: "0.0",
+        iconPath: "assets/carfeatures/petfriendly.svg",
+       ),
     CharactersticsWidget(
-      amenitie: 'Ski Rack',
-      value: "0.0",
-      iconPath: "assets/carfeatures/skirack.svg",
-    ),
+        amenitie: 'Ski Rack',  value: "0.0",
+        iconPath: "assets/carfeatures/skirack.svg",
+      ),
     CharactersticsWidget(
-      amenitie: 'Snow Tires Or Chains',
-      value: "0.0",
-      iconPath: "assets/carfeatures/snowtires.svg",
-    ),
+        amenitie: 'Snow Tires Or Chains',  value: "0.0",
+        iconPath: "assets/carfeatures/snowtires.svg",
+       ),
     CharactersticsWidget(
-      amenitie: 'Sunroof',
-      iconPath: "assets/carfeatures/sunroof.svg",
-      value: "0.0",
-    ),
+        amenitie: 'Sunroof',
+        iconPath: "assets/carfeatures/sunroof.svg",
+        value: "0.0",
+        ),
     CharactersticsWidget(
-      amenitie: 'Toll Pass',
-      value: "0.0",
-      iconPath: "assets/carfeatures/tollpass.svg",
-    ),
+        amenitie: 'Toll Pass',
+            value: "0.0",
+        iconPath: "assets/carfeatures/tollpass.svg",
+        ),
     CharactersticsWidget(
-      amenitie: 'Usb Charger',
-      value: "0.0",
-      iconPath: "assets/carfeatures/usbcharger.svg",
-    ),
+        amenitie: 'Usb Charger',
+          value: "0.0",
+        iconPath: "assets/carfeatures/usbcharger.svg",
+       ),
     CharactersticsWidget(
-      amenitie: 'Usb',
-      iconPath: "assets/carfeatures/usb.svg",
-      value: "0.0",
-    ),
+        amenitie: 'Usb',
+        iconPath: "assets/carfeatures/usb.svg",
+          value: "0.0",
+        ),
     CharactersticsWidget(
-      amenitie: 'Automatic Transmission',
-      value: "0.0",
-      iconPath: "assets/carfeatures/gearshiftcarautomatic.svg",
-    ),
+        amenitie: 'Automatic Transmission',
+          value: "0.0",
+        iconPath: "assets/carfeatures/gearshiftcarautomatic.svg",
+        ),
     CharactersticsWidget(
-      amenitie: 'Manual Transmission',
-      value: "0.0",
-      iconPath: "assets/carfeatures/gearshiftcar.svg",
-    ),
+        amenitie: 'Manual Transmission',
+          value: "0.0",
+        iconPath: "assets/carfeatures/gearshiftcar.svg",
+        ),
     CharactersticsWidget(
-      amenitie: 'Keyless Entry',
-      value: "0.0",
-      iconPath: "assets/carfeatures/keylessentry.svg",
-    ),
+        amenitie: 'Keyless Entry',
+        value: "0.0",
+        iconPath: "assets/carfeatures/keylessentry.svg",
+       ),
   ];
+
+  //// nav to checkout
+  onPressContinue() {}
+  messageHost() {}
+
+  @override
+  void initState() {
+    //code
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        //extendBodyBehindAppBar: true,
-        body: SizedBox(
-          height: Get.context!.height,
-          width: Get.context!.width,
+      extendBodyBehindAppBar: true,
+      body: SizedBox(
+        height: double.infinity,
+        width: double.infinity,
+        child: SingleChildScrollView(
           child: CarBookingWidget(
             superModel: widget.superModel,
             title: widget.superModel.name!,
@@ -232,22 +235,15 @@ class _CarBookingDetail extends State<CarBookingDetail> {
             amenities: sampleAmenities,
             sampleCharacteristics: sampleCharacteristics,
             reviews: sampleReviews,
-            onPressContinue: () {},
-            messageHost: () {},
+            onPressContinue: () {
+              onPressContinue();
+            },
+            messageHost: () {
+              messageHost();
+            },
           ),
         ),
-        bottomNavigationBar: DetailBottomBarWidget(
-          onPressed: () {
-            Get.to(CarRequestBookPage(
-              superModel: widget.superModel,
-              address: "Miami, FL",
-              bath: 20.0,
-              description: "No Description",
-              owner: "Luis Gonzalez",
-              rating: 4,
-              title: "Jaguar XF 2015",
-            ));
-          },
-        ));
+      ),
+    );
   }
 }

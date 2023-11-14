@@ -1,7 +1,6 @@
 import 'package:brokr/ui/widgets/stars_widget.dart';
 import 'package:brokr/utils/theme_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class ReviewTileHorizontalWidget extends StatelessWidget {
@@ -81,23 +80,7 @@ class ReviewTileHorizontalWidget extends StatelessWidget {
                              fontFamily: "Inter-Regular",
                            ),
                          ),
-Row(
-              children: [
-                Icon(
-                  Icons.star_rounded,
-                  color: ThemeUtils.colorPurple,
-                  size: 15.0,
-                ),
-                Text(
-                  "5.0",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 10.sp,
-                  ),
-                ),
-              ],
-            ),
+                         StarsWidget(rating: rating, size: 12),
                         ],
                       ),
                     ),

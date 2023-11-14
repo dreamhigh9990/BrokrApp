@@ -1,7 +1,7 @@
 class NumbersModel {
   final String label;
   final int value;
-  bool isChecked;
+  final bool isChecked;
 
   NumbersModel(this.label, this.value, this.isChecked);
 
@@ -15,8 +15,8 @@ class NumbersModel {
       NumbersModel("5", 0, false),
       NumbersModel("6", 0, false),
       NumbersModel("7", 0, false),
-      NumbersModel("8+", 0, false),
-      
+      NumbersModel("8", 0, false),
+      NumbersModel("9", 0, false),
     ];
   }
 }

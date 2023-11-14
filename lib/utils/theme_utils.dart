@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ThemeUtils {
+
   static String interRegular = "Inter-Regular";
 
-  static const Color colorTextButton = Color(0xFF414141);
   static Color colorTripsGrey = const Color(0xFF676A6F);
   static Color colorPurple = const Color(0xFF6366F1);
   static Color colorPink = const Color(0xFFFF3A7E);
@@ -24,12 +24,17 @@ class ThemeUtils {
   static Color dropDownButtonColor = const Color(0xFFEFEFF0);
   static Color inputBorderColor = Colors.black.withOpacity(0.4);
   static Color inputFocusedColor = Colors.black;
-  static Color colorOffSwitch = const Color(0xFFBDC1C6);
-  static Divider dividerGrey = const Divider(
-    color: Colors.grey,
-    endIndent: 0.0,
-    height: 0.0,
-  );
+
+
+
+ static Divider dividerGrey =  Divider(
+                  color: Colors.grey,
+                  endIndent: 0.0,
+                  height: 0.0,
+                );
+
+
+
 
   static InputDecoration inputDecoration(
       {required String labelText,
@@ -73,13 +78,6 @@ class ThemeUtils {
       top: Get.context!.height * 0.01);
 
   static double borderShadowAppBar = Get.context!.width * 0.015;
-
-  static BoxShadow shadowCard = BoxShadow(
-    color: Colors.black.withOpacity(0.10),
-    spreadRadius: 1,
-    blurRadius: 5,
-    offset: const Offset(0, 3),
-  );
 
   final String styleMap = '''[
     {

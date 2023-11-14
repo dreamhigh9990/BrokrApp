@@ -1,13 +1,15 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:brokr/models/crew_member_model.dart';
 import 'package:brokr/ui/widgets/booking_detail/locale/host_detail_widget.dart';
+import 'package:brokr/ui/widgets/normal_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+
 import '../../../../utils/theme_utils.dart';
 import '../../../commons/pages/message_confirmd_page.dart';
 import '../../text_align_left_widget.dart';
+import '../../tiles/crew_tile_widget.dart';
 
 class AboutTheHostWidget extends StatelessWidget {
   final CrewMember crew;
@@ -17,19 +19,20 @@ class AboutTheHostWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        /*   const Divider(
+        const Divider(
           color: Colors.grey,
-        ), */
+        ),
         TextAlignLeft(title: "About the Host"),
         const SizedBox(
           height: 20.0,
         ),
         HostDetailWidget.superHeaderHostDetail(
             padding: EdgeInsets.only(
-                left: Get.context!.width * 0.39,
-                right: Get.context!.width * 0.39),
-            firstRadius: Get.height * .06,
-            secondRadius: Get.height * .0180),
+                left: Get.context!.width * 0.32,
+                right: Get.context!.width * 0.32),
+                firstRadius:  Get.height * .06,
+                   secondRadius:  Get.height * .0180
+                ),
         const SizedBox(
           height: 10.0,
         ),
@@ -39,8 +42,7 @@ class AboutTheHostWidget extends StatelessWidget {
           },
           child: Container(
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.black),
-              color: Colors.white,
+              color: ThemeUtils.colorPurple,
               borderRadius: const BorderRadius.all(
                 Radius.circular(10.0),
               ),
@@ -52,22 +54,22 @@ class AboutTheHostWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SvgPicture.asset("assets/icons/message-typing.svg",
-                      color: Colors.black, height: 20),
+                      height: 20),
                   const SizedBox(
                     width: 10.0,
                   ),
-                  Text(
+                  AutoSizeText(
                     "Message to Host",
                     style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 14.sp,
+                      color: Colors.white,
+                      fontSize: 14,
                       fontFamily: ThemeUtils.interRegular,
                     ),
                   ),
                 ]),
           ),
         ),
-        const SizedBox(
+          const SizedBox(
           height: 20.0,
         ),
       ],

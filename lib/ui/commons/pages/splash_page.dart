@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../guest/pages/home/guest_home_page.dart';
 import 'login_page.dart';
 
 class SplashPage extends StatefulWidget {
@@ -22,13 +21,14 @@ class SplashPage extends StatefulWidget {
 class _SplashPage extends State<SplashPage> {
   bool _showOptions = false;
 
-  @override
+   @override
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      Get.offAllNamed(GuestHomePage.name);
+      Get.toNamed(LoginPage.name);
     });
   }
+  
 
   Widget _buildSplash() {
     return Container(
@@ -47,9 +47,32 @@ class _SplashPage extends State<SplashPage> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-            
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton(
+                  onPressed: () {
+                    setState(() {
+                      _showOptions = true;
+                    });
+                  },
+                  child: const Text(
+                    'skip',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 17,
+                    ),
+                  ),
+                ),
+              ),
               const Spacer(),
-           
+              const Text(
+                'Welcome to',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               Lottie.asset(
                 'assets/lottie/splash_logo.json',
                 height: 80,
@@ -126,6 +149,7 @@ class _SplashPage extends State<SplashPage> {
       ),
     );
   }
+
 
   @override
   Widget build(BuildContext context) {

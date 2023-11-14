@@ -44,7 +44,7 @@ class PinWidget extends StatelessWidget {
         defaultPinTheme: defaultPinTheme,
         validator: (value) {
           // return value == '111111' ? null : 'Pin is incorrect';
-          return;
+          return ;
         },
         // onClipboardFound: (value) {
         //   debugPrint('onClipboardFound: $value');

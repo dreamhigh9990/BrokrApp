@@ -2,7 +2,13 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:brokr/ui/widgets/appbar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../widgets/bottom_bar_container_full_widget.dart';
+import 'package:get/get.dart';
+import '../../../utils/theme_utils.dart';
+
+import '../../guest/pages/home/guest_home_page.dart';
+import '../../widgets/normal_button.dart';
+import '../../widgets/primary_text.dart' as common_text;
+
 class SuccessPage extends StatelessWidget {
   static String name = '/success-page';
   final String svg;
@@ -21,8 +27,6 @@ class SuccessPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomBar(title: "Success", showLeading: false),
-      bottomNavigationBar:
-          BottomBarContainerFullWidget(ontap: () {}, title: "Done"),
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -36,17 +40,17 @@ class SuccessPage extends StatelessWidget {
               fit: BoxFit.contain,
             ),
             const SizedBox(height: 20),
-            AutoSizeText(
-              title,
+             AutoSizeText(
+             title,
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style:const TextStyle(
                   fontSize: 18,
                   color: Colors.black,
                   fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            AutoSizeText(
-              subtitle,
+             AutoSizeText(
+             subtitle,
               textAlign: TextAlign.center,
               style: const TextStyle(
                 fontSize: 14,
@@ -54,6 +58,15 @@ class SuccessPage extends StatelessWidget {
               ),
             ),
             const Spacer(),
+            NormalButton(
+              backgroundColor: ThemeUtils.colorPurple,
+              text: titleButton,
+              onTap: () {
+                Get.offAllNamed(GuestHomePage.name);
+              },
+              cornersRadius: 8,
+            ),
+            const SizedBox(height: 32),
           ],
         ),
       ),

@@ -1,10 +1,7 @@
 import 'package:brokr/utils/theme_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-import '../../../../utils/calendar_utils.dart';
-import '../../text_align_left_widget.dart';
 
 class InsuranceInformationWidget extends StatelessWidget {
   const InsuranceInformationWidget({
@@ -41,46 +38,35 @@ class InsuranceInformationWidget extends StatelessWidget {
             right: Get.context!.width * 0.05),
         shrinkWrap: true,
         children: [
-          TextAlignLeft(title: "Insurance info"),
-          const SizedBox(
-            height: 10.0,
-          ),
-          customtextfield("Auto insurance company"),
-          customtextfield("Insurance policy number"),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              customtextfield("Effective date",
-                  hintText: "MM/DD/YY", width: Get.context!.width * 0.40),
-              customtextfield("Expiration date",
-                  hintText: "MM/DD/YY", width: Get.context!.width * 0.40),
-            ],
-          ),
-          customtextfield("Insured name"),
+          customtextfield("Insured first name"),
           customtextfield("Insured last name"),
-          customtextfield("Insured phone number"),
-          TextAlignLeft(title: "Vehicle info"),
-          const SizedBox(
-            height: 10.0,
-          ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              customtextfield("Insured vehicle year",
-                  width: Get.context!.width * 0.38),
-              customtextfield("Make", width: Get.context!.width * 0.24),
-              customtextfield("Model", width: Get.context!.width * 0.24),
+              customtextfield("Birthday", width: Get.context!.width * 0.40),
+              customtextfield("Country/Region",
+                  width: Get.context!.width * 0.40),
             ],
           ),
-          customtextfield("Insured vehicle VIN number"),
+          customtextfield("Address"),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              customtextfield("City", width: Get.context!.width * 0.28),
+              customtextfield("State", width: Get.context!.width * 0.28),
+              customtextfield("Zip Code", width: Get.context!.width * 0.28),
+            ],
+          ),
+          customtextfield("Phone Number"),
+          customtextfield("Email"),
         ],
       ),
     );
   }
 
-  Widget customtextfield(String text, {double? width, String? hintText = ""}) {
+  Widget customtextfield(String text, {double? width}) {
     width ??= Get.context!.width;
     return Container(
       margin: const EdgeInsets.only(top: 5.0, bottom: 5.0),
@@ -91,14 +77,8 @@ class InsuranceInformationWidget extends StatelessWidget {
             fontWeight: FontWeight.normal,
             isPadding: const EdgeInsets.only(left: 15.0, right: 15.0),
             labelText: text),
-        child: TextField(
-             inputFormatters: [
-          FilteringTextInputFormatter.digitsOnly,
-          DateTextFormatter(),
-        ],
-        keyboardType: TextInputType.number,
+        child: const TextField(
           decoration: InputDecoration(
-            hintText: hintText,
             border: InputBorder.none, // Eliminar el borde del TextField
           ),
           textInputAction: TextInputAction.done,

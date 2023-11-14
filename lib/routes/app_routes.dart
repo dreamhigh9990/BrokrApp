@@ -4,7 +4,7 @@ import 'package:brokr/ui/commons/pages/login_page.dart';
 import 'package:brokr/ui/commons/pages/splash_page.dart';
 import 'package:brokr/ui/commons/pages/verify_email_page.dart';
 import 'package:brokr/ui/commons/pages/verify_phone_page.dart';
-import 'package:brokr/ui/guest/pages/home/fragments/chat/chat_room_fragment.dart';
+import 'package:brokr/ui/guest/fragments/chat/chat_room_fragment.dart';
 
 import 'package:brokr/ui/guest/fragments/settings/language_page.dart';
 import 'package:brokr/ui/guest/fragments/settings/notifications_page.dart';

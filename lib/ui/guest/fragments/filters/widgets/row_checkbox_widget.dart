@@ -4,24 +4,15 @@ import 'package:flutter/material.dart';
 import '../../../../../utils/theme_utils.dart';
 
 class RowCheckBoxWidget extends StatefulWidget {
-  final bool value;
   final String title;
-
-  final Function(bool val) function;
-  const RowCheckBoxWidget({
-    super.key,
-    required this.title,
-    required this.value,
-    required this.function,
-  });
+  const RowCheckBoxWidget({super.key, required this.title});
 
   @override
   State<RowCheckBoxWidget> createState() => _RowCheckBoxWidgetState();
 }
 
 class _RowCheckBoxWidgetState extends State<RowCheckBoxWidget> {
-  TextStyle styleTitle = TextStyle(fontSize: 14, color: ThemeUtils.titleFilter);
-
+    TextStyle styleTitle = TextStyle(fontSize: 14, color: ThemeUtils.titleFilter);
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -29,14 +20,14 @@ class _RowCheckBoxWidgetState extends State<RowCheckBoxWidget> {
         AutoSizeText(widget.title, style: styleTitle),
         const Spacer(),
         Switch(
-            value: widget.value,
-            activeTrackColor: ThemeUtils.colorSwitch,
-            activeColor: ThemeUtils.colorPurple,
-            inactiveTrackColor: ThemeUtils.colorOffSwitch,
-            inactiveThumbColor: Colors.white,
-            onChanged: (bool locale) {
-              widget.function(locale);
-            })
+          value: true,
+          trackColor: MaterialStatePropertyAll<Color>(ThemeUtils.colorSwitch),
+          thumbColor: MaterialStatePropertyAll<Color>(ThemeUtils.colorPurple),
+          onChanged: (bool value) {
+            // This is called when the user toggles the switch.
+            setState(() {});
+          },
+        )
       ],
     );
   }

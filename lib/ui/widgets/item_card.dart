@@ -5,7 +5,6 @@ import 'package:brokr/ui/widgets/stars_widget.dart';
 import 'package:brokr/utils/theme_utils.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
@@ -25,174 +24,268 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Get.context!.height * 0.350,
+      height: Get.context!.height * 0.3950,
       width: Get.context!.width,
-      decoration: BoxDecoration(boxShadow: [
-        BoxShadow(
-          color: Colors.black.withOpacity(0.10),
-          spreadRadius: 1,
-          blurRadius: 5,
-          offset: const Offset(0, 3),
-        ),
-      ], color: Colors.white, borderRadius: BorderRadius.circular(15.0)),
+      decoration: BoxDecoration(
+          color: Colors.white, borderRadius: BorderRadius.circular(15.0)),
       margin: margin,
-      child: Stack(children: [
-        Container(
-            //  color: Colors.green,
-            width: Get.context!.width,
-            height: Get.context!.height * 0.25,
-            decoration: BoxDecoration(
-                borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(15),
-                    topRight: Radius.circular(15.0)),
-                color: Colors.white,
-                image: DecorationImage(
-                    image: NetworkImage(
-                      superModel.image!,
-                    ),
-                    fit: BoxFit.cover)),
-            child: Container(
-              padding: EdgeInsets.symmetric(
-                  horizontal: Get.context!.width * 0.035,
-                  vertical: Get.context!.height * 0.025),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  if (superModel.topHost) ...{
-                    Container(
-                      padding: const EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(4.0)),
-                      child: Row(children: [
-                        Container(
-                          height: 5.0,
-                          width: 5.0,
-                          color: const Color(0xFF2ECFA5),
-                        ),
-                        const SizedBox(
-                          width: 10.0,
-                        ),
-                        const Text(
-                          "Top Host",
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(
-                          width: 5.0,
-                        ),
-                      ]),
-                    ),
-                  } else ...{
-                    Container(),
-                  },
-                  GestureDetector(
-                    onTap: () {
-                      changedFavorite();
-                    },
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                      ),
-                      padding: const EdgeInsets.all(5),
-                      child: superModel.isFavourite == false
-                          ? const Icon(
-                              Icons.favorite_border_outlined,
-                              color: Colors.grey,
-                            )
-                          : const Icon(
-                              Icons.favorite,
-                              color: Colors.red,
-                            ),
-                    ),
-                  ),
-                ],
-              ),
-            )),
-        Positioned(
-          top: Get.context!.height * 0.2225,
-          child: Container(
-            padding: EdgeInsets.symmetric(
-              horizontal: Get.context!.width * 0.02850,
-            ),
-            // color: Colors.green,
-            width: Get.context!.width * 0.85,
-            height: Get.context!.height * 0.075,
-            child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Align(
-                          alignment: Alignment.center,
-                          child: Icon(
-                            Icons.star_rounded,
-                            color: ThemeUtils.colorPurple,
+      child: Column(
+        children: [
+          Expanded(
+              flex: 2,
+              child: Container(
+                  width: Get.context!.width,
+                  decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(15),
+                          topRight: Radius.circular(15.0)),
+                      color: Colors.white,
+                      image: DecorationImage(
+                          image: NetworkImage(
+                            superModel.image!,
                           ),
-                        ),
-                        const Align(
-                          alignment: Alignment.center,
-                          child: Text("4.0"),
+                          fit: BoxFit.cover)),
+                  child: Container(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: Get.context!.width * 0.035,
+                        vertical: Get.context!.height * 0.025),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        if (superModel.topHost) ...{
+                          Container(
+                            padding: const EdgeInsets.all(5.0),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(4.0)),
+                            child: Row(children: [
+                              Container(
+                                height: 5.0,
+                                width: 5.0,
+                                color: const Color(0xFF2ECFA5),
+                              ),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              const Text(
+                                "Top Host",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(
+                                width: 5.0,
+                              ),
+                            ]),
+                          ),
+                        } else ...{
+                          Container(),
+                        },
+                        GestureDetector(
+                          onTap: () {
+                            changedFavorite();
+                          },
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                            ),
+                            padding: const EdgeInsets.all(5),
+                            child: superModel.isFavourite == false
+                                ? const Icon(
+                                    Icons.favorite_border_outlined,
+                                    color: Colors.grey,
+                                  )
+                                : const Icon(
+                                    Icons.favorite,
+                                    color: Colors.red,
+                                  ),
+                          ),
                         ),
                       ],
                     ),
-                  ),
-                  if (superModel.isDeal)
-                    Container(
-                      alignment: Alignment.center,
-                      height: isSmall ? 40 : 45,
-                      width: isSmall ? 40 : 45,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: ThemeUtils.colorPurple,
-                      ),
-                      child: Text(
-                        'DEAL',
-                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                            color: Colors.white, fontSize: isSmall ? 12 : 14),
-                      ),
-                    ),
-                ]),
-          ),
-        ),
-        Positioned(
-            top: Get.context!.height * 0.290,
-            child: Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: Get.context!.width * 0.035,
-              ),
-              //color: Colors.green,
-              width: Get.context!.width * 0.90,
-              height: Get.context!.height * 0.055,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("Title Full Listing Card Item",
-                          maxLines: 2,
-                          style: TextStyle(
-                              fontSize: 14.sp, fontWeight: FontWeight.bold)),
-                      Padding(
-                        padding:
-                            EdgeInsets.only(right: Get.context!.width * 0.025),
+                  ))),
+          Expanded(
+              flex: 1,
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: Get.context!.width * 0.035,
+                ),
+                child: Column(children: [
+                  Expanded(
+                      flex: 2,
+                      child: Container(
+                        // color: Colors.blue,
+                        child: Row(children: [
+                          Expanded(
+                              flex: 4,
+                              child: Container(
+                                //  color: Colors.red,
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          const Icon(
+                                            Icons.star_rate_rounded,
+                                            color: Color(0xFFFFB134),
+                                            size: 18,
+                                          ),
+                                          const Icon(
+                                            Icons.star_rate_rounded,
+                                            color: Color(0xFFFFB134),
+                                            size: 18,
+                                          ),
+                                          const Icon(
+                                            Icons.star_rate_rounded,
+                                            color: Color(0xFFFFB134),
+                                            size: 18,
+                                          ),
+                                          const Icon(
+                                            Icons.star_rate_rounded,
+                                            color: Color(0xFFFFB134),
+                                            size: 18,
+                                          ),
+                                          const Icon(
+                                            Icons.star_rate_rounded,
+                                            color: Color(0xFFFFB134),
+                                            size: 18,
+                                          ),
+                                          Text(
+                                            '(4.5)',
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .headlineMedium!
+                                                .copyWith(
+                                                  fontSize: 14,
+                                                  color:
+                                                      const Color(0xFF646464),
+                                                ),
+                                          ),
+                                          const SizedBox(width: 8),
+                                          Container(
+                                            height: 15.0,
+                                            width: 2.5,
+                                            color: Colors.black,
+                                          ),
+                                          const SizedBox(width: 8),
+                                          SvgPicture.asset(
+                                            'assets/icons/super_host_icon.svg',
+                                            height: 12,
+                                          ),
+                                          Text(
+                                            " ${superModel.hostName!}",
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .headlineMedium!
+                                                .copyWith(
+                                                  fontSize: 14,
+                                                  color:
+                                                      const Color(0xFF646464),
+                                                ),
+                                          ),
+                                        ],
+                                      ),
+                                      Text(
+                                        superModel.name!,
+                                        maxLines: 2,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .titleLarge!
+                                            .copyWith(
+                                                fontSize: isSmall ? 14 : 16),
+                                      ),
+                                    ]),
+                              )),
+                          if (superModel.isDeal)
+                            Expanded(
+                                child: Container(
+                              //color: Colors.orange,
+                              child: Container(
+                                alignment: Alignment.center,
+                                height: isSmall ? 40 : 45,
+                                width: isSmall ? 40 : 45,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: ThemeUtils.colorPurple,
+                                  /*            image: DecorationImage(
+                                  image: AssetImage(
+                                    'assets/images/circle_orange.png',
+                                  ),
+                                )
+                                 */
+                                ),
+                                child: Text(
+                                  'DEAL',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .titleLarge!
+                                      .copyWith(
+                                          color: Colors.white,
+                                          fontSize: isSmall ? 12 : 14),
+                                ),
+                              ),
+                            )),
+                        ]),
+                      )),
+                  Expanded(
+                      child: Container(
+                    alignment: Alignment.topCenter,
+                    //color: Colors.green,
+                    child: Row(children: [
+                      Expanded(
+                          flex: 4,
+                          child: Container(
+                            //       color: Colors.blue,
+                            child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  const Icon(Icons.location_on_sharp,
+                                      color: Color(0xFF646464), size: 15),
+                                  const SizedBox(
+                                    width: 2.5,
+                                  ),
+                                  Text(
+                                    superModel.address!,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displaySmall!
+                                        .copyWith(
+                                          fontSize: isSmall ? 10 : 12,
+                                          color: const Color(0xFF646464),
+                                        ),
+                                  ),
+                                  const SizedBox(
+                                    width: 10.0,
+                                  ),
+                                  Container(
+                                    height: 5.0,
+                                    width: 5.0,
+                                    decoration: const BoxDecoration(
+                                        color: Color(0xFF646464),
+                                        shape: BoxShape.circle),
+                                  ),
+                                  const SizedBox(
+                                    width: 10.0,
+                                  ),
+                                  const Text(
+                                    "11.6 mi",
+                                    style: TextStyle(
+                                      color: Color(0xFF646464),
+                                    ),
+                                  ),
+                                ]),
+                          )),
+                      Expanded(
+                          child: Container(
+                        //  color: Colors.orange,
                         child: RichText(
-                          text: TextSpan(
-                            text: '\$138/',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16.sp,
-                            ),
-                            children: const <TextSpan>[
+                          text: const TextSpan(
+                            text: '138\$/',
+                            style: TextStyle(color: Colors.black),
+                            children: <TextSpan>[
                               TextSpan(
                                   text: 'Day',
                                   style: TextStyle(
@@ -201,64 +294,24 @@ class ItemCard extends StatelessWidget {
                             ],
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  Row(children: [
-                    const Icon(Icons.location_on_sharp,
-                        color: Color(0xFF646464), size: 15),
-                    const SizedBox(
-                      width: 2.5,
-                    ),
-                    Text(
-                      superModel.address!,
-                      style: Theme.of(context).textTheme.displaySmall!.copyWith(
-                            fontSize: isSmall ? 10 : 12,
-                            color: const Color(0xFF646464),
-                          ),
-                    ),
-                    const SizedBox(
-                      width: 10.0,
-                    ),
-                    Container(
-                      height: 5.0,
-                      width: 5.0,
-                      decoration: const BoxDecoration(
-                          color: Color(0xFF646464), shape: BoxShape.circle),
-                    ),
-                    const SizedBox(
-                      width: 10.0,
-                    ),
-                    const Text(
-                      "11.6 mi",
-                      style: TextStyle(
-                        color: Color(0xFF646464),
-                      ),
-                    ),
-                  ]),
-                ],
-              ),
-            )),
-      ]),
+                      ))
+                    ]),
+                  ))
+                ]),
+              ))
+        ],
+      ),
     );
   }
 }
 
 class ItemCardMini extends StatelessWidget {
   final Function changedFavorite;
-
   final SuperModel superModel;
   final EdgeInsetsGeometry? margin;
 
-  bool? delete;
-  bool? isShowCancel;
-  Function? onCancel;
-
   ItemCardMini({
-    this.delete = false,
-    this.onCancel,
     super.key,
-    this.isShowCancel = false,
     this.margin,
     required this.superModel,
     required this.changedFavorite,
@@ -281,9 +334,7 @@ class ItemCardMini extends StatelessWidget {
         children: [
           SizedBox(
               height: Get.context!.height * 0.20,
-              width: delete == true
-                  ? Get.context!.width * 0.4250
-                  : Get.context!.width * 0.38,
+              width: Get.context!.width * 0.4250,
               child: Stack(
                 children: [
                   Container(
@@ -331,208 +382,161 @@ class ItemCardMini extends StatelessWidget {
                         } else ...{
                           Container(),
                         },
+                        Container(
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                          ),
+                          padding: const EdgeInsets.all(5),
+                          child: superModel.isFavourite == false
+                              ? const Icon(
+                                  Icons.favorite_border_outlined,
+                                  color: Colors.grey,
+                                )
+                              : const Icon(
+                                  Icons.favorite,
+                                  color: Colors.red,
+                                ),
+                        ),
                       ],
                     ),
                   ),
-                  if (isShowCancel == true) ...{
-                    GestureDetector(
-                      onTap: () {
-                        onCancel!();
-                      },
-                      child: Container(
-                        alignment: Alignment.center,
-                        margin: EdgeInsets.all(Get.context!.height * 0.015),
-                        height: 20.0,
-                        width: 20.0,
-                        decoration: BoxDecoration(
-                            color: Colors.black.withOpacity(0.5),
-                            shape: BoxShape.circle),
-                        child: SvgPicture.asset("assets/icons/close_cancel.svg",
-                            height: 15, color: Colors.white),
-                      ),
-                    )
-                  },
                 ],
               )),
-          Container(
-            height: Get.context!.height * 0.20,
-            //   color: Colors.green,
-            padding: EdgeInsets.only(
-                top: Get.context!.height * 0.01,
-                bottom: Get.context!.height * 0.01),
-            child: Stack(fit: StackFit.loose, children: [
-              Container(
-                // color: Colors.red,
-                width: Get.context!.width * 0.4750,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Icon(
-                      Icons.star_rounded,
-                      color: ThemeUtils.colorPurple,
-                      size: 18,
-                    ),
-                    const SizedBox(
-                      width: 2.5,
-                    ),
-                    Text(
-                      "5.0",
-                      style: TextStyle(fontSize: 10.sp),
-                    ),
-                    const SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      height: 15.0,
-                      width: 1.0,
-                      color: Colors.black,
-                    ),
-                    const SizedBox(
-                      width: 5,
-                    ),
-                    SvgPicture.asset(
-                      'assets/icons/super_host_icon.svg',
-                      height: 12,
-                    ),
-                    const SizedBox(
-                      width: 5,
-                    ),
-                    Text("Host Name Lastname",
-                        style: TextStyle(fontSize: 08.sp)),
-                    const Spacer(),
-                    Container(
-                      margin: const EdgeInsets.only(right: 5.0),
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
+          Expanded(
+              flex: 3,
+              child: Container(
+                // color: Colors.green,
+                padding: EdgeInsets.symmetric(
+                    horizontal: Get.context!.width * 0.01,
+                    vertical: Get.context!.height * 0.015),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          StarsWidgetRight(
+                            rating: 4,
+                            size: 10,
+                            fontSize: 6,
+                          ),
+                          Container(
+                            height: 15.0,
+                            width: 1.0,
+                            color: Colors.black,
+                          ),
+                          SvgPicture.asset(
+                            'assets/icons/super_host_icon.svg',
+                            height: 12,
+                          ),
+                          AutoSizeText(
+                            "Host Name",
+                            style: Theme.of(context)
+                                .textTheme
+                                .headlineMedium!
+                                .copyWith(
+                                  fontSize: 6,
+                                  color: const Color(0xFF646464),
+                                ),
+                          ),
+                        ],
                       ),
-                      child: superModel.isFavourite == false
-                          ? const Icon(
-                              Icons.favorite_border_outlined,
-                              color: Colors.grey,
-                              size: 15,
-                            )
-                          : Icon(
-                              Icons.favorite,
-                              size: 15,
+                      if (superModel.isDeal == false)
+                        const SizedBox(
+                          height: 5.0,
+                        ),
+                      AutoSizeText(
+                        superModel.name!,
+                        maxLines: 2,
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleLarge!
+                            .copyWith(fontSize: 12),
+                      ),
+                      if (superModel.isDeal == false)
+                        const SizedBox(
+                          height: 5.0,
+                        ),
+                      Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            const Icon(Icons.location_on_sharp,
+                                color: Color(0xFF646464), size: 15),
+                            const SizedBox(
+                              width: 2.5,
+                            ),
+                            AutoSizeText(
+                              superModel.address!,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .displaySmall!
+                                  .copyWith(
+                                    fontSize: 10,
+                                    color: const Color(0xFF646464),
+                                  ),
+                            ),
+                            const SizedBox(
+                              width: 10.0,
+                            ),
+                            Container(
+                              height: 5.0,
+                              width: 5.0,
+                              decoration: const BoxDecoration(
+                                  color: Color(0xFF646464),
+                                  shape: BoxShape.circle),
+                            ),
+                            const SizedBox(
+                              width: 10.0,
+                            ),
+                            const Text(
+                              "11.6 mi",
+                              style: TextStyle(
+                                color: Color(0xFF646464),
+                              ),
+                            ),
+                          ]),
+                      if (superModel.isDeal)
+                        Container(
+                          alignment: Alignment.centerRight,
+                          child: Container(
+                            alignment: Alignment.center,
+                            height: 40,
+                            width: 40,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
                               color: ThemeUtils.colorPurple,
                             ),
-                    ),
-                  ],
-                ),
-              ),
-              if (delete == true) ...{
-                Transform.translate(
-                    offset: Offset(Get.context!.width * 0.4250, -30),
-                    child: MaterialButton(
-                      shape: const CircleBorder(),
-                      color: const Color(0xFFF9F9F9),
-                      height: 25.0,
-                      minWidth: 25,
-                      onPressed: () {
-                        print("on pressed");
-                        onCancel!();
-                      },
-                      child: SvgPicture.asset(
-                        "assets/icons/close_cancel.svg",
-                        height: 15,
-                      ),
-                    ))
-              },
-              if (superModel.isDeal == false)
-                const SizedBox(
-                  height: 5.0,
-                ),
-              Positioned(
-                top: 20.0,
-                child: Text(
-                  "Title Full Listing Card Item",
-                  maxLines: 2,
-                  style: TextStyle(fontSize: 11.sp),
-                ),
-              ),
-              if (superModel.isDeal == false)
-                const SizedBox(
-                  height: 5.0,
-                ),
-              Positioned(
-                top: 40.0,
-                child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const Icon(Icons.location_on_sharp,
-                          color: Color(0xFF646464), size: 15),
-                      const SizedBox(
-                        width: 2.5,
-                      ),
-                      Text(
-                        superModel.address!,
-                        style: TextStyle(fontSize: 10.sp),
-                      ),
-                      const SizedBox(
-                        width: 10.0,
-                      ),
-                      Container(
-                        height: 5.0,
-                        width: 5.0,
-                        decoration: const BoxDecoration(
-                            color: Color(0xFF646464), shape: BoxShape.circle),
-                      ),
-                      const SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        "11.6 mi",
-                        style: TextStyle(
-                            fontSize: 10.sp, color: const Color(0xFF646464)),
+                            child: AutoSizeText(
+                              'DEAL',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleLarge!
+                                  .copyWith(color: Colors.white, fontSize: 10),
+                            ),
+                          ),
+                        ),
+                      if (superModel.isDeal == false) const Spacer(),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: RichText(
+                          text: const TextSpan(
+                            text: '138\$/',
+                            style: TextStyle(color: Colors.black),
+                            children: <TextSpan>[
+                              TextSpan(
+                                  text: 'Day',
+                                  style: TextStyle(
+                                    color: Color(0xFF646464),
+                                  )),
+                            ],
+                          ),
+                        ),
                       ),
                     ]),
-              ),
-              if (superModel.isDeal)
-                Positioned(
-                  right: 0,
-                  bottom: 20,
-                  child: Container(
-                    alignment: Alignment.centerRight,
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: ThemeUtils.colorPurple,
-                      ),
-                      child: Text(
-                        "DEAL",
-                        style: TextStyle(
-                            fontSize: 10.sp,
-                            fontWeight: FontWeight.bold,
-                            color: const Color.fromARGB(255, 255, 255, 255)),
-                      ),
-                    ),
-                  ),
-                ),
-              Positioned(
-                right: 0,
-                bottom: 0,
-                child: RichText(
-                  text: const TextSpan(
-                    text: '\$138/',
-                    style: TextStyle(color: Colors.black),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'Day',
-                          style: TextStyle(
-                            color: Color(0xFF646464),
-                          )),
-                    ],
-                  ),
-                ),
-              )
-            ]),
-          )
+              ))
         ],
       ),
     );
@@ -692,17 +696,25 @@ class ItemCardTrip extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      const AutoSizeText(
+                        "Title Full Listing Card Item",
+                        style: TextStyle(fontSize: 12),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
                       Container(
+                        //color: Colors.green,
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             StarsWidgetRight(
                               rating: 4,
-                              size: 14,
-                              fontSize: 10,
+                              size: 08,
+                              fontSize: 8,
                             ),
-                            const SizedBox(
+                           const SizedBox(
                               width: 5,
                             ),
                             Container(
@@ -710,69 +722,63 @@ class ItemCardTrip extends StatelessWidget {
                               width: 1.0,
                               color: Colors.black,
                             ),
-                            const SizedBox(
+                          const  SizedBox(
                               width: 5,
                             ),
                             SvgPicture.asset(
                               'assets/icons/super_host_icon.svg',
                               height: 12,
                             ),
-                            const SizedBox(
+                           const SizedBox(
                               width: 5,
                             ),
                             Text(
-                              "Host Name Lastname ",
+                              "Host Name",
                               style: TextStyle(
                                   color: ThemeUtils.colorTripsGrey,
-                                  fontSize: 08.sp),
+                                  fontSize: 10),
                             ),
                           ],
                         ),
-                      ),
-                    const SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Title Full Listing Card Item",
-                        style: TextStyle(fontSize: 12.sp),
                       ),
                       const SizedBox(
                         height: 5,
                       ),
-                      if (isBoat == false) ...{
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "Sat, Oct 08, 10:30 AM",
-                              style: TextStyle(
-                                  color: ThemeUtils.colorTripsGrey,
-                                  fontSize: 6),
+
+                      if(isBoat== false)...{
+                         Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Sat, Oct 08, 10:30 AM",
+                            style: TextStyle(
+                                color: ThemeUtils.colorTripsGrey, fontSize: 6),
+                          ),
+                          Container(
+                            width: 5,
+                            height: 5,
+                            decoration: BoxDecoration(
+                              color: ThemeUtils.colorTripsGrey,
+                              shape: BoxShape.circle,
                             ),
-                            Container(
-                              width: 5,
-                              height: 5,
-                              decoration: BoxDecoration(
-                                color: ThemeUtils.colorTripsGrey,
-                                shape: BoxShape.circle,
-                              ),
-                            ),
-                            Text(
-                              "Sat, Oct 08, 10:30 AM",
-                              style: TextStyle(
-                                  color: ThemeUtils.colorTripsGrey,
-                                  fontSize: 6),
-                            ),
-                          ],
-                        ),
-                      } else if (isBoat == true) ...{
-                        Text(
-                          "Sat, Oct 08 | 2 Hours | 12:00 AM",
-                          style: TextStyle(
-                              color: ThemeUtils.colorTripsGrey, fontSize: 6),
-                        ),
+                          ),
+                          Text(
+                            "Sat, Oct 08, 10:30 AM",
+                            style: TextStyle(
+                                color: ThemeUtils.colorTripsGrey, fontSize: 6),
+                          ),
+                        ],
+                      ),
+                      }else if(isBoat== true)...{
+
+                         Text(
+                            "Sat, Oct 08 | 2 Hours | 12:00 AM",
+                            style: TextStyle(
+                                color: ThemeUtils.colorTripsGrey, fontSize: 6),
+                          ),
                       },
+                     
                       const SizedBox(
                         height: 5,
                       ),

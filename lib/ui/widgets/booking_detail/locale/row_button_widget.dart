@@ -20,32 +20,40 @@ class RowButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (isShowChange! == false) {
-      return Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          MaterialButton(
-              padding: const EdgeInsets.all(0.0),
-              minWidth: 0,
-              onPressed: () {
-                Get.to( PickUpReturnWidget());
-              },
-              child: Row(
-                children: [
-                  const AutoSizeText(
-                    "CHANGE",
-                    style: TextStyle(color: Color(0xFF505050), fontSize: 11),
-                  ),
-                  const SizedBox(width: 5),
-                  SvgPicture.asset("assets/icons/change.svg")
-                ],
-              ))
-        ],
-      );
-    } else {
-      return TextAlignLeft(title: title);
-    }
-    ;
+    return Column(
+      children: [
+        if (isShowChange! == false) ...{
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              TextAlignLeft(title: title),
+              MaterialButton(
+                  padding: const EdgeInsets.all(0.0),
+                  minWidth: 0,
+                  onPressed: () {
+                    Get.to(const PickUpReturnWidget());
+                  },
+                  child: Row(
+                    children: [
+                      const AutoSizeText(
+                        "CHANGE",
+                        style:
+                            TextStyle(color: Color(0xFF505050), fontSize: 11),
+                      ),
+                      const SizedBox(width: 5),
+                      SvgPicture.asset("assets/icons/change.svg")
+                    ],
+                  ))
+            ],
+          ),
+        } else ...{
+          TextAlignLeft(title: title),
+          const SizedBox(
+            height: 10.0,
+          ),
+        }
+      ],
+    );
   }
 }

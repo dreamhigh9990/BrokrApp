@@ -1,7 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'dart:collection';
-import 'package:brokr/ui/guest/pages/home/fragments/trips/car/detail_page_car.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -11,14 +10,13 @@ import '../../../../models/super_model.dart';
 import '../../../../utils/calendar_utils.dart';
 import '../../../../utils/theme_utils.dart';
 import '../../../widgets/item_card.dart';
+import '../../../widgets/list_card_items_widgets.dart';
 import '../../../widgets/tiles/asset_tile_widget.dart';
-
+import '../../pages/home/widgets/tab_buttoms_widget.dart';
 
 class BookedFragment extends StatefulWidget {
-
-   int groupValue;
   final List<List<SuperModel>> list;
-   BookedFragment({required this.list, super.key ,required this.groupValue} );
+  const BookedFragment({required this.list, super.key});
 
   @override
   _BookedFragmentState createState() => _BookedFragmentState();
@@ -43,7 +41,7 @@ class _BookedFragmentState extends State<BookedFragment> {
   DateTime iFocusedDay = DateTime.now();
 
   DateTime? _selectedDay;
-
+  int groupValue = 0;
 
   @override
   void initState() {
@@ -106,7 +104,11 @@ class _BookedFragmentState extends State<BookedFragment> {
     ),
   ].reversed.toList();
 
-
+  void updateWidgets(int value) {
+    setState(() {
+      groupValue = value;
+    });
+  }
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -188,7 +190,10 @@ class _BookedFragmentState extends State<BookedFragment> {
             const SizedBox(
               height: 20.0,
             ),
-        
+            TabButtomWidget(
+              groupValue: groupValue,
+              function: updateWidgets,
+            ),
             Expanded(
                 child: ListView.builder(
                     shrinkWrap: true,
@@ -199,10 +204,7 @@ class _BookedFragmentState extends State<BookedFragment> {
                         height: Get.context!.height * 0.20,
                         margin: const EdgeInsets.only(bottom: 16),
                         child: GestureDetector(
-                          onTap: () {
-
-                            Get.to(DetailPageCar());
-                          },
+                          onTap: () {},
                           child: SizedBox(
                             width: MediaQuery.of(context).size.width * 0.9,
                             child: ItemCardTrip(
@@ -212,9 +214,9 @@ class _BookedFragmentState extends State<BookedFragment> {
                                 left: ThemeUtils.borderShadowAppBar,
                                 right: ThemeUtils.borderShadowAppBar,
                               ),
-                              superModel: widget.list[widget.groupValue][index],
+                              superModel: widget.list[groupValue][index],
                               changedFavorite: () {},
-                                isBoat: widget.groupValue== 2 ? true : false,
+                                isBoat: groupValue== 2 ? true : false,
                             ),
                           ),
                         ),

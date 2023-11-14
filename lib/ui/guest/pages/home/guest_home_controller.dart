@@ -3,28 +3,23 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-
+import 'package:permission_handler/permission_handler.dart';
 import '../../../../controllers/ticker_provider.dart';
 import '../../../../models/super_model.dart';
 import '../../../bottom_sheets/bottom_sheets_guest.dart';
 import '../../fragments/filters/car_filter.dart';
 import '../../fragments/filters/boat_filter.dart';
 import '../../fragments/filters/stay_filter.dart';
+import '../../fragments/filters/boat_filter.dart';
 import 'fragments/chat_fragment.dart';
 import 'fragments/favorites_fragment.dart';
 import 'fragments/profile_fragment.dart';
 import 'fragments/trips_fragment.dart';
 
 class GuestHomeController extends GetxController {
-
-    double percent = 1.0;
-
-    double extent= 0.9;
-    
   SuperModel? itemSelected;
   GoogleMapController? mapController;
   final GuestBottomSheests bottomSheests = GuestBottomSheests();
-  ScrollController scrollListView = ScrollController();
 
   /* Position? currentPosition; */
 
@@ -44,8 +39,12 @@ class GuestHomeController extends GetxController {
     'Oldest',
   ];
 
-  bool isVisible = true;
-  set isSheetExpanded(bool value) {}
+  final filters = const [
+    FilterCarWidget(),
+    FilterStayWidget(),
+    //FilterYachtWidget(),
+    FilterBoatWidget(),
+  ];
 
   String? sortCarValue;
 
@@ -65,10 +64,10 @@ class GuestHomeController extends GetxController {
   ];
 //E:\proyectos_flutter\BrokrApp\assets\bottombar\routing.svg
   final iconFragments = [
-    'assets/bottombar/searchnormal.svg',
+    'assets/bottombar/search-normal.svg',
     'assets/bottombar/heart.svg',
-    'assets/bottombar/trips.svg',
-    'assets/bottombar/tracking.svg',
+    'assets/bottombar/routing.svg',
+    'assets/bottombar/sms-tracking.svg',
     'assets/bottombar/profile.svg',
   ];
 
@@ -78,19 +77,11 @@ class GuestHomeController extends GetxController {
   late TabController tabController;
 
   bool showBottombar = true;
-  Position? currentPosition;
-  bool isLocationFetched = false;
 
-  String? where;
-  String? when;
-
-  String simpleString = "Cars";
-
-  List<SuperModel> favorites = [];
   @override
   void onInit() {
     showBottombar = true;
-    /*  checkLocationPermission(); */
+   /*  checkLocationPermission(); */
     tabController = TabController(
       initialIndex: 0,
       length: labelFragments.length,
@@ -104,21 +95,17 @@ class GuestHomeController extends GetxController {
     super.onInit();
   }
 
-
-
+  @override
+  void onReady() {
+    super.onReady();
+  }
 
   @override
   void onClose() {
     tabController.dispose();
     mapController?.dispose();
-    scrollListView.dispose();
 
     super.onClose();
-  }
-
-  void updateWidgetGlobal(String widget) {
-    //print("actualizar widgets $widget");
-    update([widget]);
   }
 
   void onMarkerTapped(int? markerId) {
@@ -128,12 +115,7 @@ class GuestHomeController extends GetxController {
       itemSelected = null;
     }
 
-    update(["item_select"]);
-  }
-
-  void onCancelSelected() {
-    itemSelected = null;
-    update(["item_select"]);
+    update(["change_screen"]);
   }
 
   void onChangedMarker(int? markerId) {}
@@ -150,13 +132,13 @@ class GuestHomeController extends GetxController {
   Widget buildContent() {
     switch (index) {
       case 0:
-        return  HomeFragment();
+        return const HomeFragment();
       case 1:
         return FavoritesFragment();
       case 2:
         return const TripsFragment();
       case 3:
-        return  ChatFragment();
+        return const ChatFragment();
       case 4:
         return const ProfileFragment();
       default:
@@ -175,20 +157,8 @@ class GuestHomeController extends GetxController {
     update(["bottom_bar"]);
   }
 
-  void offBottomBar() {
-    if (showBottombar == true) {
-      showBottombar = !showBottombar;
-      update(["bottom_bar"]);
-    }
-    return;
-  }
-
-  void onBottomBar() {
-    if (showBottombar == false) {
-      showBottombar = !showBottombar;
-      update(["bottom_bar"]);
-    }
-    return;
+  void updateScreen() {
+    update(["change_screen"]);
   }
 
   void updateWidget(int locale, int index) {
@@ -205,46 +175,56 @@ class GuestHomeController extends GetxController {
   void buildFilters(BuildContext context) {
     changeBottombar();
 
-    showGeneralDialog(
+    showBottomSheet(
+      elevation: 5.0,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(32),
+          topRight: Radius.circular(32),
+        ),
+      ),
       context: context,
-      pageBuilder: (_____, anim1, anim2) {
-        return Align(
-            alignment: Alignment.bottomCenter,
-            child: Material(
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(15),
-                topRight: Radius.circular(15),
-              ),
-              child: Container(
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(15),
-                      topRight: Radius.circular(15)),
-                  color: Colors.white,
-                ),
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 0.85,
-                child: GetBuilder<GuestHomeController>(
-                  id: "locale_widget_filters",
-                  builder: (___) => [
-                    FilterCarWidget(),
-                    FilterStayWidget(
-                      realoadingWidgetList: (String val) =>
-                          updateWidgetGlobal(val),
-                    ),
-                    FilterBoatWidget(),
-                  ][groupValue.value],
-                ),
-              ),
-            ));
-      },
-      transitionBuilder: (___, anim1, anim2, child) {
-        return SlideTransition(
-          position: Tween(begin: const Offset(0, 1), end: const Offset(0, 0))
-              .animate(anim1),
-          child: child,
-        );
-      },
+      builder: (context2) => Container(
+        margin: const EdgeInsets.only(
+          top: 20.0,
+        ),
+        padding: EdgeInsets.only(
+            left: Get.context!.width * 0.05, right: Get.context!.width * 0.05),
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height * 0.95,
+        child: StatefulBuilder(
+          builder: (context3, setSheetState) {
+            sheetState = setSheetState;
+            return filters[groupValue.value];
+          },
+        ),
+      ),
     );
   }
+
+  /* Future getCurrentLocation() async {
+    Position position = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
+    currentPosition = position;
+  }
+ */
+ /*   void checkLocationPermission() async {
+    PermissionStatus permission = await Permission.location.request();
+    if (permission.isGranted) {
+      await getCurrentLocation();
+    } else {
+      // Manejar la denegación de permisos
+      if (permission.isDenied) {
+        // El usuario denegó los permisos
+        // Puedes mostrar un diálogo o realizar alguna otra acción
+        print('El usuario denegó los permisos de ubicación');
+      } else if (permission.isPermanentlyDenied) {
+        // El usuario seleccionó la opción "No preguntar de nuevo"
+        // Puedes mostrar un diálogo y redirigir al usuario a la configuración de la aplicación para habilitar los permisos manualmente
+        print('El usuario seleccionó "No preguntar de nuevo" para los permisos de ubicación');
+      }
+    }
+  }
+ */
+  
 }

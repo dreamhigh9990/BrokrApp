@@ -1,34 +1,17 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:brokr/ui/guest/pages/home/guest_home_controller.dart';
 import 'package:brokr/ui/widgets/text_align_left_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
 
 import '../../../../../utils/theme_utils.dart';
-import '../../../../bottom_sheets/bottom_sheets_guest.dart';
-import '../../../../widgets/booking_detail/locale/list_tile_widget.dart';
 import 'pay_widget.dart';
 
-enum LikePay {
-  total,
-  half,
-}
-
-class CommonsWidget extends StatefulWidget {
+class CommonsWidget extends StatelessWidget {
   bool? showPayWith;
   CommonsWidget({
     super.key,
     this.showPayWith = true,
   });
-
-  @override
-  State<CommonsWidget> createState() => _CommonsWidgetState();
-}
-
-class _CommonsWidgetState extends State<CommonsWidget> {
-  LikePay? likePay;
-  final GuestHomeController guestHomeController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -38,46 +21,30 @@ class _CommonsWidgetState extends State<CommonsWidget> {
           height: 20.0,
         ),
         TextAlignLeft(title: "How would you like to pay?"),
-        ListTile(
+        const ListTile(
           minLeadingWidth: 0.0,
-          contentPadding: const EdgeInsets.all(0.0),
+          contentPadding: EdgeInsets.all(0.0),
           minVerticalPadding: 0.0,
-          trailing: Radio<LikePay>(
-              activeColor: ThemeUtils.colorPurple,
-              value: LikePay.total,
-              groupValue: likePay,
-              onChanged: (LikePay? locale) async {
-                likePay = locale;
-
-                setState(() {});
-              }),
-          title: const AutoSizeText(
-            "Pay total amount",
+          trailing: Radio(value: false, groupValue: {}, onChanged: null),
+          title: AutoSizeText(
+            "Pay in full",
             style: TextStyle(fontSize: 15.0),
           ),
-          subtitle: const AutoSizeText(
+          subtitle: AutoSizeText(
             "Pay the total amount \$4,800.00 and you’re all set.",
             style: TextStyle(fontSize: 12.0),
           ),
         ),
-        ListTile(
+        const ListTile(
           minLeadingWidth: 0.0,
-          trailing: Radio<LikePay>(
-              activeColor: ThemeUtils.colorPurple,
-              value: LikePay.half,
-              groupValue: likePay,
-              onChanged: (LikePay? locale) async {
-                likePay = locale;
-
-                setState(() {});
-              }),
-          contentPadding: const EdgeInsets.all(0.0),
+          trailing: Radio(value: false, groupValue: {}, onChanged: null),
+          contentPadding: EdgeInsets.all(0.0),
           minVerticalPadding: 0.0,
-          title: const AutoSizeText(
+          title: AutoSizeText(
             "Pay half now, rest later",
             style: TextStyle(fontSize: 15.0),
           ),
-          subtitle: const AutoSizeText(
+          subtitle: AutoSizeText(
             "Pay \$2,400.00 now and rest (\$2,400.00) will be automatically charged to the same payment method on Oct, 05, 2022 No extra fees. ",
             style: TextStyle(fontSize: 12.0),
           ),
@@ -91,32 +58,12 @@ class _CommonsWidgetState extends State<CommonsWidget> {
         const SizedBox(
           height: 10.0,
         ),
-        if (widget.showPayWith!) ...{
+        if (showPayWith!) ...{
           const PayWidget(),
         },
-        ListTileColumnWidget(
-          pressed: () async {
-            var response = await GuestBottomSheests.buildshowGeneralDialog(
-                context: context,
-                widgetChild:
-                    guestHomeController.bottomSheests.cancellationPolicy(),
-                height: Get.context!.height * 0.5);
-          },
-          title: "Cancellation Policy",
-          subtitle: "Flexible",
-          body: "Free cancellation and full refund before Nov 5, 11:00 AM",
-          icon: "cancel_policy",
-        ),
-        ThemeUtils.dividerGrey,
-        const SizedBox(
-          height: 10.0,
-        ),
         TextAlignLeft(title: "Attached documents"),
         ListTile(
-          leading: Container(
-              height: 30,
-              width: 30.0,
-              child: SvgPicture.asset("assets/icons/clippers.svg", width: 30)),
+          leading: SvgPicture.asset("assets/icons/clippers.svg", width: 30),
           minLeadingWidth: 0.0,
           contentPadding: const EdgeInsets.all(0.0),
           minVerticalPadding: 0.0,
@@ -126,23 +73,18 @@ class _CommonsWidgetState extends State<CommonsWidget> {
           ),
         ),
         ListTile(
-          leading: Container(
-              height: 30,
-              width: 30.0,
-              child: SvgPicture.asset("assets/icons/clippers.svg", width: 30)),
+          leading: SvgPicture.asset("assets/icons/clippers.svg", width: 30),
           minLeadingWidth: 0.0,
-          contentPadding: EdgeInsets.zero,
+          contentPadding: const EdgeInsets.all(0.0),
           minVerticalPadding: 0.0,
           title: const Text(
             "Insurance card",
             style: TextStyle(fontSize: 14.0),
           ),
         ),
-        ThemeUtils.dividerGrey,
-        const SizedBox(
-          height: 20.0,
+        const Divider(
+          color: Colors.grey,
         ),
-        TextAlignLeft(title: "Message Host"),
         const SizedBox(
           height: 20.0,
         ),
@@ -152,10 +94,7 @@ class _CommonsWidgetState extends State<CommonsWidget> {
               labelText: "Leave a message to the Host",
               isPadding: ThemeUtils.paddingLeftAndRight),
           child: const TextField(
-            textInputAction: TextInputAction.done,
-            decoration: InputDecoration(
-              border: InputBorder.none,
-            ),
+            textInputAction: TextInputAction.go,
             maxLines: 6,
           ),
         ),

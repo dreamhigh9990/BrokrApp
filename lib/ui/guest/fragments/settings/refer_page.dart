@@ -59,7 +59,7 @@ class ReferalPage extends StatelessWidget {
           ),
           const Spacer(flex: 3),
           NormalButton(
-            backgroundColor: ThemeUtils.colorPurple,
+              backgroundColor: ThemeUtils.colorPurple,
             margin: const EdgeInsets.symmetric(horizontal: 24),
             text: 'Share Now',
             onTap: () {

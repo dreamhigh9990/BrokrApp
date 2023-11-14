@@ -7,8 +7,6 @@ import '../../../widgets/booking_detail/boat_booking_widget.dart';
 import '../../../widgets/tiles/amenities_tile_widget.dart';
 import '../../../widgets/tiles/characteristics_widget.dart';
 import '../../../widgets/tiles/review_tile_widget.dart';
-import '../request_to_book/boat_request_book_page.dart';
-import 'widgets/bottom_bar_widget.dart';
 
 class BoatBookingDetail extends StatefulWidget {
   final SuperModel superModel;
@@ -27,100 +25,108 @@ class _BoatBookingDetail extends State<BoatBookingDetail> {
 
   CrewMember crew = const CrewMember('Pepe', 50, 4.5, 'Oct 2022',
       'https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=1200');
-  List<AmenitiesTieWidget> sampleAmenities = [
+    List<AmenitiesTieWidget> sampleAmenities = [
     AmenitiesTieWidget(
-        fontSizeText: 10,
         amenitie: '36 ft',
         iconPath: 'assets/specifications_boats/length.svg',
         height: 25,
         width: 25,
         color: Colors.black),
-    AmenitiesTieWidget(
+
+           AmenitiesTieWidget(
         amenitie: '2021',
-        fontSizeText: 10,
         iconPath: 'assets/specifications_boats/year.svg',
         height: 25,
         width: 25,
         color: Colors.black),
-    AmenitiesTieWidget(
-        fontSizeText: 10,
+
+         AmenitiesTieWidget(
         amenitie: 'AQUILA YACHTS',
         iconPath: 'assets/specifications_boats/make.svg',
         height: 25,
         width: 25,
         color: Colors.black),
-    AmenitiesTieWidget(
-        fontSizeText: 10,
+
+            AmenitiesTieWidget(
         amenitie: '36',
         iconPath: 'assets/specifications_boats/model.svg',
         height: 25,
         width: 25,
         color: Colors.black),
-    AmenitiesTieWidget(
-        fontSizeText: 10,
+
+          AmenitiesTieWidget(
         amenitie: '12 Passengers ',
         iconPath: 'assets/specifications_boats/capacity.svg',
         height: 25,
         width: 25,
         color: Colors.black),
-    AmenitiesTieWidget(
+
+
+           AmenitiesTieWidget(
         amenitie: 'Catamaran ',
-        fontSizeText: 10,
         iconPath: 'assets/specifications_boats/type.svg',
         height: 25,
         width: 25,
         color: Colors.black),
-    AmenitiesTieWidget(
-        fontSizeText: 10,
+
+         AmenitiesTieWidget(
         amenitie: '3 Staterooms',
         iconPath: 'assets/specifications_boats/rooms.svg',
         height: 25,
         width: 25,
         color: Colors.black),
+  
+
     AmenitiesTieWidget(
-        fontSizeText: 10,
         amenitie: '2 Bed count',
         iconPath: 'assets/specifications_boats/beds.svg',
         height: 25,
         width: 25,
         color: Colors.black),
+  
+  
   ];
 
-  List<CharactersticsWidget> sampleCharacteristics = const [
+
+
+
+
+
+ List<CharactersticsWidget> sampleCharacteristics = const [
     CharactersticsWidget(
       amenitie: 'Jacuzzy',
       iconPath: "assets/boatfeatures/jacuzzy.svg",
-      value: "0",
+         value: "0",
     ),
     CharactersticsWidget(
       amenitie: 'Red Wine',
       iconPath: "assets/boatfeatures/red_wine.svg",
-      value: "0",
+       value: "0",
     ),
     CharactersticsWidget(
       amenitie: 'WiFi',
       iconPath: "assets/boatfeatures/wifi.svg",
-      value: "0",
+       value: "0",
     ),
     CharactersticsWidget(
       amenitie: 'Pets',
       iconPath: "assets/boatfeatures/pets.svg",
-      value: "0",
+       value: "0",
     ),
     CharactersticsWidget(
       amenitie: 'Swimming',
       iconPath: "assets/boatfeatures/swim.svg",
-      value: "0",
+         value: "0",
     ),
     CharactersticsWidget(
       amenitie: 'Alcohol',
       iconPath: "assets/boatfeatures/alcohol.svg",
-      value: "0",
+        value: "0",
     ),
     CharactersticsWidget(
       amenitie: 'Bed Count',
       iconPath: "assets/boatfeatures/bed.svg",
-      value: "0",
+        value: "0",
     ),
     CharactersticsWidget(
       amenitie: 'Shoes',
@@ -130,7 +136,7 @@ class _BoatBookingDetail extends State<BoatBookingDetail> {
     CharactersticsWidget(
       amenitie: 'Fishing',
       iconPath: "assets/boatfeatures/fishing.svg",
-      value: "0",
+       value: "0",
     ),
     CharactersticsWidget(
       amenitie: 'Snorkeling Gear',
@@ -140,7 +146,7 @@ class _BoatBookingDetail extends State<BoatBookingDetail> {
     CharactersticsWidget(
       amenitie: 'Jet Ski',
       iconPath: "assets/boatfeatures/jetski.svg",
-      value: "0",
+       value: "0",
     ),
     CharactersticsWidget(
       amenitie: 'Fish Finder',
@@ -150,26 +156,25 @@ class _BoatBookingDetail extends State<BoatBookingDetail> {
     CharactersticsWidget(
       amenitie: 'Paddleboards',
       iconPath: "assets/boatfeatures/paddleboards.svg",
-      value: "0",
+       value: "0",
     ),
     CharactersticsWidget(
       amenitie: 'Fishing Gear',
       iconPath: "assets/boatfeatures/fishing_gear.svg",
-      value: "0",
+       value: "0",
     ),
     CharactersticsWidget(
       amenitie: 'Rod Holders',
       iconPath: "assets/boatfeatures/rod_holders.svg",
-      value: "0",
+        value: "0",
     ),
     CharactersticsWidget(
       amenitie: 'Anchor',
       iconPath: "assets/boatfeatures/anchor.svg",
-      value: "0",
-    )
+      value: "0",)
   ];
 
-  List<ReviewTileHorizontalWidget> sampleReviews = [
+  List<ReviewTileHorizontalWidget> sampleReviews =  [
     ReviewTileHorizontalWidget(
         name: 'Raymond',
         text:
@@ -190,13 +195,23 @@ class _BoatBookingDetail extends State<BoatBookingDetail> {
         rating: 3.5),
   ];
   //// nav to checkout
+  onPressContinue() {}
+  messageHost() {}
+
+  @override
+  void initState() {
+    //code
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SizedBox(
-          height: Get.context!.height,
-          width: Get.context!.width,
+      body: SizedBox(
+        width: Get.context!.width,
+        height: Get.context!.height,
+        child: SingleChildScrollView(
           child: BoatBookingWidget(
             owner: "Luis",
             superModel: widget.superModel,
@@ -221,22 +236,15 @@ class _BoatBookingDetail extends State<BoatBookingDetail> {
             amenities: sampleAmenities,
             characteristics: sampleCharacteristics,
             reviews: sampleReviews,
-            onPressContinue: () {},
-            messageHost: () {},
+            onPressContinue: () {
+              onPressContinue();
+            },
+            messageHost: () {
+              messageHost();
+            },
           ),
         ),
-        bottomNavigationBar: DetailBottomBarWidget(
-          onPressed: () {
-            Get.to(BoatRequestBookPage(
-              superModel: widget.superModel,
-              address: "Miami, FL",
-              bath: 20.0,
-              description: "No Description",
-              owner: "Luis Gonzalez",
-              rating: 4,
-              title: "Jaguar XF 2015",
-            ));
-          },
-        ));
+      ),
+    );
   }
 }

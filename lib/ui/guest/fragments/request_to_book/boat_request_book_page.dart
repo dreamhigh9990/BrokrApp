@@ -45,12 +45,7 @@ class BoatRequestBookPage extends StatelessWidget {
         ),
         body: SingleChildScrollView(
             child: Column(children: [
-                 Container(
-                  
-                  height: Get.context!.height*0.25,
-                  width: Get.context!.width,
-            
-            child: HeaderImageItemWidget(imageUrl: superModel.image!)),
+          HeaderImageItemWidget(imageUrl: superModel.image!),
           Container(
             margin: ThemeUtils.paddingScaffoldxTop10,
             padding: ThemeUtils.paddingScaffoldx05,
@@ -63,7 +58,7 @@ class BoatRequestBookPage extends StatelessWidget {
                     description: description,
                     rating: rating,
                     bath: bath),
-               /*  Row(
+                Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -103,7 +98,7 @@ class BoatRequestBookPage extends StatelessWidget {
                       ],
                     ))
                   ],
-                ), */
+                ),
                  const SizedBox(height: 10,),
                 const Divider(
                   color: Colors.grey,

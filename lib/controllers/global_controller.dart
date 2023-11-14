@@ -1,12 +1,13 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
-
+import '../utils/session_utils.dart';
 import '/models/user_model.dart';
 import '/utils/map_utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 
 class GlobalController {
   late SharedPreferences prefs;
@@ -16,7 +17,9 @@ class GlobalController {
   final _tokenFcm = ''.obs;
   bool searchNear = true;
 
-  GlobalController() {}
+  GlobalController() {
+   
+  }
 
   bool get showProgress => isLoading.value;
 
@@ -25,6 +28,7 @@ class GlobalController {
   UserModel? get user => _user.value;
 
   set user(UserModel? value) {
+   
     _user.value = value;
   }
 
@@ -70,23 +74,5 @@ class GlobalController {
         colorText: Colors.white,
         backgroundColor: Colors.green,
         snackPosition: SnackPosition.BOTTOM);
-  }
-
-  Future<XFile?> addImageCamera(BuildContext context) async {
-    try {
-           final ImagePicker picker = ImagePicker();
-            final XFile? image =
-                await picker.pickImage(source: ImageSource.camera);
-
-         
-
-      if (image==null) return null;
-
-      return image;
-    } catch (e) {
-      print(e.toString());
-      print("catch images ");
-      return null;
-    }
   }
 }

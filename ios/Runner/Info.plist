@@ -30,15 +30,6 @@
 	<string>Your location is required for benefits of the points closest to you</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Your location is required for benefits of the points closest to you</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Your location is required for benefits of the points closest to you</string>
-	<key>NSCameraUsageDescription</key>
-	<string>This app needs access for Upload Image in Profile User</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Used to capture audio for the Profile User</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app needs access for Upload Image in Profile User</string>
-	
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UIBackgroundModes</key>

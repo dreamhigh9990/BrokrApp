@@ -1,6 +1,5 @@
 class SuperModel {
   String? id;
-    String? favoriteTitle;
   final String? hostName;
   final String? money;
   final String? name;
@@ -10,7 +9,6 @@ class SuperModel {
   final String? type;
   final String? image;
   final String? owner;
-
 
   final String? extented;
   final bool isDeal;
@@ -115,7 +113,7 @@ class SuperModel {
     for (int i = 0; i < 100; i++) {
       SuperModel superModel = SuperModel(
           isDeal: i % 2 == 0 ? true : false,
-          topHost: i % 2 == 0 ? true : false,
+          topHost:  i % 2 == 0 ? true : false,
           hostName: "Host Name 1",
           money: "200",
           name: "Boat JAGUAR XF",

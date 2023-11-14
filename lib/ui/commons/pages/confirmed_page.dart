@@ -1,9 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../utils/theme_utils.dart';
+
 
 import '../../guest/pages/home/guest_home_page.dart';
 import '../../widgets/appbar_widget.dart';
@@ -26,7 +26,6 @@ class CongratulationsPage extends StatelessWidget {
           title: 'Confirmed',
         ),
         body: Container(
-          padding: ThemeUtils.paddingScaffoldx05,
           width: double.infinity,
           height: double.infinity,
           margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -35,24 +34,24 @@ class CongratulationsPage extends StatelessWidget {
               const Spacer(),
               SvgPicture.asset(
                 'assets/icons/congratulations.svg',
-                height: MediaQuery.of(context).size.height * 0.15,
+                height: MediaQuery.of(context).size.height * 0.25,
                 fit: BoxFit.contain,
               ),
-              const SizedBox(height: 10),
-              Text(
+                 const SizedBox(height: 10),
+              const AutoSizeText(
                 'Congratulations',
                 style: TextStyle(
-                  fontSize: 22.sp,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 17,
+                  fontWeight: FontWeight.w500,
                   color: Colors.black,
                 ),
               ),
               const SizedBox(height: 10),
-              Text(
-                'Thank you for verifying your access, you can now enter the platform.',
+              const AutoSizeText(
+                'Your account has been successfully\nverified and activated',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 14.sp,
+                  fontSize: 15,
                   color: Colors.black,
                 ),
               ),

@@ -1,6 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:brokr/utils/theme_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class NormalButton extends StatelessWidget {
   final String text;
@@ -17,18 +19,12 @@ class NormalButton extends StatelessWidget {
   final bool applyWidth;
   final bool emptyBackground;
 
-  final Color? colorText;
-
-  final Color? colorBorder;
-
   final FontWeight weight;
 
   const NormalButton({
     Key? key,
     required this.text,
     required this.onTap,
-    this.colorBorder = Colors.transparent,
-    this.colorText = Colors.white,
     this.margin = const EdgeInsets.all(0),
     this.padding = const EdgeInsets.all(0),
     this.width,
@@ -53,23 +49,19 @@ class NormalButton extends StatelessWidget {
         padding: padding,
         margin: margin,
         decoration: BoxDecoration(
-         border: Border.all(
-          color: colorBorder!,
-          width: 0.5
-         ),
           color: backgroundColor,
           borderRadius: BorderRadius.all(
             Radius.circular(cornersRadius),
           ),
         ),
-        child: Text(
+        child: AutoSizeText(
           text,
           maxLines: maxTextLines,
           overflow: TextOverflow.ellipsis,
           style: TextStyle(
             fontFamily: ThemeUtils.interRegular,
-            color: colorText,
-            fontSize: (textSize ?? 16).sp,
+            color: Colors.white,
+            fontSize: (textSize ?? 16),
             fontWeight: weight,
           ),
         ),

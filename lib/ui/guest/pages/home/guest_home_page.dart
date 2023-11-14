@@ -1,10 +1,12 @@
 // ignore_for_file: must_be_immutable
 
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../widgets/bottom_bar_widget.dart';
 import 'guest_home_controller.dart';
+
 
 class GuestHomePage extends GetView<GuestHomeController> {
   static String name = '/guest-home-page';
@@ -13,12 +15,14 @@ class GuestHomePage extends GetView<GuestHomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GetBuilder<GuestHomeController>(
-          id: "guest_home_page", builder: (__) => controller.buildContent()),
-  /*     bottomNavigationBar: GetBuilder<GuestHomeController>(
+      body: SafeArea(
+        child: GetBuilder<GuestHomeController>(
+            id: "guest_home_page", builder: (__) => controller.buildContent()),
+      ),
+      bottomNavigationBar: GetBuilder<GuestHomeController>(
         id: 'bottom_bar',
-        builder: (controller) => Offstage(
-            offstage: !controller.showBottombar,
+        builder: (controller) => Visibility(
+            visible: controller.showBottombar,
             child: BottomBarWidget(
               labels: controller.labelFragments,
               iconsPath: controller.iconFragments,
@@ -28,8 +32,7 @@ class GuestHomePage extends GetView<GuestHomeController> {
                 controller.updatePage(value);
               },
             )),
-      
-      ), */
+      ),
     );
   }
 }

@@ -14,7 +14,7 @@ class RatingAndReviwsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TextAlignLeft(title: "Raiting & Reviews"),
+        TextAlignLeft(title: "Comments & Reviews"),
         const SizedBox(
           height: 10.0,
         ),
@@ -46,20 +46,13 @@ class RatingAndReviwsWidget extends StatelessWidget {
             child: Text(
               'See all reviews',
               style: TextStyle(
-                  color: ThemeUtils.colorPurple,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                   fontFamily: ThemeUtils.interRegular,
                   fontSize: 12,
                   decoration: TextDecoration.underline),
             ),
           ),
-        ),
-        const SizedBox(
-          height: 10.0,
-        ),
-        ThemeUtils.dividerGrey,
-        const SizedBox(
-          height: 10.0,
         ),
       ],
     );

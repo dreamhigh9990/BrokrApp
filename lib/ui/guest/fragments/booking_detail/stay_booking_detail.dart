@@ -7,8 +7,6 @@ import '../../../widgets/booking_detail/stay_booking_widget.dart';
 import '../../../widgets/tiles/amenities_tile_widget.dart';
 import '../../../widgets/tiles/characteristics_widget.dart';
 import '../../../widgets/tiles/review_tile_widget.dart';
-import '../request_to_book/stay_request_book_page.dart';
-import 'widgets/bottom_bar_widget.dart';
 
 class StayBookingDetail extends StatefulWidget {
   final SuperModel superModel;
@@ -29,28 +27,24 @@ class _StayBookingDetail extends State<StayBookingDetail> {
       'https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=1200');
   List<AmenitiesTieWidget> sampleAmenities = [
     AmenitiesTieWidget(
-        fontSizeText: 10,
         amenitie: '1200 ft sq',
         iconPath: 'assets/icons/icon_1200ftsq.svg',
         height: 25,
         width: 25,
         color: Colors.black),
     AmenitiesTieWidget(
-        fontSizeText: 10,
         amenitie: '2 Bedrooms',
         iconPath: 'assets/icons/icon_two_bedrooms.svg',
         height: 25,
         width: 25,
         color: Colors.black),
     AmenitiesTieWidget(
-        fontSizeText: 10,
         amenitie: '3 Bed',
         iconPath: 'assets/icons/icon_three_bed.svg',
         height: 25,
         width: 25,
         color: Colors.black),
     AmenitiesTieWidget(
-        fontSizeText: 10,
         amenitie: '2 Bathrooms',
         iconPath: 'assets/icons/bathrooms.svg',
         height: 25,
@@ -60,14 +54,12 @@ class _StayBookingDetail extends State<StayBookingDetail> {
 
   List<AmenitiesTieWidget> sleepAmenities = [
     AmenitiesTieWidget(
-        fontSizeText: 10,
         amenitie: '2 Kings Bed',
         iconPath: 'assets/icons/two_bed.svg',
         height: 25,
         width: 25,
         color: Colors.black),
     AmenitiesTieWidget(
-        fontSizeText: 10,
         amenitie: '1 Single Bed',
         iconPath: 'assets/icons/one_bed.svg',
         height: 25,
@@ -310,54 +302,43 @@ class _StayBookingDetail extends State<StayBookingDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: DetailBottomBarWidget(
-          onPressed: () {
-            Get.to(StayRequestBookPage(
-              superModel: widget.superModel,
-              address: "Miami, FL",
-              bath: 20.0,
-              description: "No Description",
-              owner: "Luis Gonzalez",
-              rating: 4,
-              title: "Jaguar XF 2015",
-            ));
+        body: Container(
+      height: Get.context!.height,
+      width: double.infinity,
+      child: SingleChildScrollView(
+        child: StayBookingWidget(
+          sleepAmenities: sleepAmenities,
+          superModel: widget.superModel,
+          title: widget.superModel.name!,
+          address: widget.superModel.address!,
+          image: widget.superModel.image!,
+          owner: "Luis",
+          rating: 4.5,
+          price: 7490,
+          price2: 7899,
+          isFavourite: true,
+          margin: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+          bath: 4,
+          bed: 4,
+          description: "asdsadsads",
+          startDate: 'Sat, Oct 08, 10:30 AM',
+          endDate: 'Sat, Oct 08, 10:30 AM',
+          guests: 15,
+          policy: policy,
+          crew: crew,
+          allowed: allowed,
+          notAllowed: notAllowed,
+          sampleAmenities: sampleAmenities,
+          characteristics: sampleCharacteristics,
+          reviews: sampleReviews,
+          onPressContinue: () {
+            onPressContinue();
+          },
+          messageHost: () {
+            messageHost();
           },
         ),
-        body: SizedBox(
-          height: Get.context!.height,
-          width: Get.context!.width,
-          child: StayBookingWidget(
-            sleepAmenities: sleepAmenities,
-            superModel: widget.superModel,
-            title: widget.superModel.name!,
-            address: widget.superModel.address!,
-            image: widget.superModel.image!,
-            owner: "Luis",
-            rating: 4.5,
-            price: 7490,
-            price2: 7899,
-            isFavourite: true,
-            margin: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-            bath: 4,
-            bed: 4,
-            description: "asdsadsads",
-            startDate: 'Sat, Oct 08, 10:30 AM',
-            endDate: 'Sat, Oct 08, 10:30 AM',
-            guests: 15,
-            policy: policy,
-            crew: crew,
-            allowed: allowed,
-            notAllowed: notAllowed,
-            sampleAmenities: sampleAmenities,
-            characteristics: sampleCharacteristics,
-            reviews: sampleReviews,
-            onPressContinue: () {
-              onPressContinue();
-            },
-            messageHost: () {
-              messageHost();
-            },
-          ),
-        ));
+      ),
+    ));
   }
 }

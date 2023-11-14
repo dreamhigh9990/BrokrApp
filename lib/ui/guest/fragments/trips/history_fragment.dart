@@ -6,14 +6,13 @@ import 'package:get/get.dart';
 import '../../../../models/super_model.dart';
 import '../../../../utils/theme_utils.dart';
 import '../../../widgets/item_card.dart';
-
+import '../../../widgets/list_card_items_widgets.dart';
+import '../../../widgets/tiles/asset_tile_widget.dart';
 import '../../pages/home/widgets/tab_buttoms_widget.dart';
 
 class HistoryFragment extends StatefulWidget {
   final List<List<SuperModel>> list;
-   int groupValue;
-
-     HistoryFragment({required this.list, super.key ,required this.groupValue} );
+  HistoryFragment({required this.list, super.key});
 
   @override
   State<HistoryFragment> createState() => _HistoryFragmentState();
@@ -24,6 +23,13 @@ class _HistoryFragmentState extends State<HistoryFragment> {
 
   bool showFab = false;
 
+  int groupValue = 0;
+
+  void updateWidgets(int value) {
+    setState(() {
+      groupValue = value;
+    });
+  }
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -103,7 +109,10 @@ class _HistoryFragmentState extends State<HistoryFragment> {
             const SizedBox(
               height: 20.0,
             ),
-           
+            TabButtomWidget(
+              groupValue: groupValue,
+              function: updateWidgets,
+            ),
             Expanded(
                 child: ListView.builder(
                     shrinkWrap: true,
@@ -126,9 +135,9 @@ class _HistoryFragmentState extends State<HistoryFragment> {
                                 left: ThemeUtils.borderShadowAppBar,
                                 right: ThemeUtils.borderShadowAppBar,
                               ),
-                              superModel: widget.list[widget.groupValue][index],
+                              superModel: widget.list[groupValue][index],
                               changedFavorite: () {},
-                             isBoat: widget.groupValue== 2 ? true : false,
+                             isBoat: groupValue== 2 ? true : false,
                             ),
                           ),
                         ),

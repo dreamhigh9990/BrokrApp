@@ -1,5 +1,3 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 
 import '../../text_align_left_widget.dart';
@@ -15,12 +13,9 @@ class SpecificationsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-         const SizedBox(
-          height: 5.0,
-        ),
         TextAlignLeft(title: title!),
         const SizedBox(
-          height: 10.0,
+          height: 20.0,
         ),
         GridView.builder(
           padding: const EdgeInsets.all(0.0),
@@ -43,7 +38,7 @@ class SpecificationsWidget extends StatelessWidget {
           color: Colors.grey,
         ),
         const SizedBox(
-          height: 10.0,
+          height: 5.0,
         ),
       ],
     );

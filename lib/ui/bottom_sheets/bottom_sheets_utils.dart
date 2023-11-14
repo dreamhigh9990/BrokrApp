@@ -1,14 +1,10 @@
-
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:brokr/ui/widgets/booking_detail/locale/insurance_information_widget.dart';
 import 'package:brokr/utils/theme_utils.dart';
 import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
-
-
-import '../widgets/normal_button.dart';
 
 class BottomSheetsUtils {
   static buildBottomSheet({
@@ -18,7 +14,7 @@ class BottomSheetsUtils {
     required Color color,
     required EdgeInsets padding,
   }) async {
-    return await showGeneralDialog(
+    showGeneralDialog(
       context: context,
       barrierLabel: "Barrier",
       barrierDismissible: true,
@@ -27,21 +23,23 @@ class BottomSheetsUtils {
       pageBuilder: (_, __, ___) {
         return Align(
           alignment: Alignment.bottomCenter,
-          child: Material(
-            borderRadius: BorderRadius.circular(40),
-            child: Container(
-              padding: padding,
-              height: height,
-              width: Get.context!.width,
-              decoration: ShapeDecoration(
-                color: color,
-                shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(34.0),                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-                  topRight: Radius.circular(34.0),
-                )),
+          child: SafeArea(
+            child: Material(
+              borderRadius: BorderRadius.circular(40),
+              child: Container(
+                padding: padding,
+                height: height,
+                width: Get.context!.width,
+                decoration: ShapeDecoration(
+                  color: color,
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(34.0),
+                    topRight: Radius.circular(34.0),
+                  )),
+                ),
+                child: child,
               ),
-              child: child,
             ),
           ),
         );
@@ -71,85 +69,119 @@ class BottomSheetsUtils {
     );
   }
 
-  Widget addCameraOrGallery(String title,
-      {bool? anotherWidget = false, required BuildContext context}) {
+  Widget addCameraOrGallery(String title, {bool? anotherWidget = false}) {
     return Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
       const SizedBox(
         height: 20.0,
       ),
-      Text(
+      AutoSizeText(
         title,
         style: TextStyle(
-            fontSize: 13.sp,
             fontWeight: FontWeight.bold,
             fontFamily: ThemeUtils.interRegular,
             color: Colors.black),
       ),
       const SizedBox(
-        height: 10.0,
+        height: 20.0,
       ),
-      ThemeUtils.dividerGrey,
-      button(
-          function: () async {
-            final ImagePicker picker = ImagePicker();
-            final XFile? image =
-                await picker.pickImage(source: ImageSource.gallery);
+      InkWell(
+        onTap: () {},
+        child: Container(
+          color: const Color.fromARGB(255, 247, 246, 246),
+          height: 50,
+          child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SvgPicture.asset(
+                  ("assets/icons/gallery.svg"),
+                  color: ThemeUtils.titleFilter,
+                ),
+                AutoSizeText("Add From Gallery",
+                    style: TextStyle(
+                        color: ThemeUtils.titleFilter,
+                        fontFamily: ThemeUtils.interRegular)),
+                SizedBox(
+                  width: Get.context!.width * 0.065,
+                ),
+              ]),
+        ),
+      ),
+  
+      const Divider(
+        endIndent: 0.0,
+        height: 0.0,
+        indent: 0.0,
+        thickness: 0.0,
+        color: Colors.grey,
+      ),
+      InkWell(
+        onTap: () {},
+        child: Container(
+          color: const Color.fromARGB(255, 247, 246, 246),
+          height: 50,
+          child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SvgPicture.asset(
+                  ("assets/icons/camera.svg"),
+                  color: ThemeUtils.titleFilter,
+                ),
+                AutoSizeText("Take a photo",
+                    style: TextStyle(
+                        color: ThemeUtils.titleFilter,
+                        fontFamily: ThemeUtils.interRegular)),
+                SizedBox(
+                  width: Get.context!.width * 0.065,
+                ),
+              ]),
+        ),
+      ),
 
-            if (image != null) {
-              Get.back(result: {"files": image});
-            }
+          if (anotherWidget! == true) ...{
+        const Divider(
+          endIndent: 0.0,
+          height: 0.0,
+          indent: 0.0,
+          thickness: 0.0,
+          color: Colors.grey,
+        ),
+        InkWell(
+          onTap: () {
+
+            Get.to(
+              const InsuranceInformationWidget(),
+            );
           },
-          title: "Add from gallery"),
-      ThemeUtils.dividerGrey,
-      button(
-          function: () async {
-              final ImagePicker picker = ImagePicker();
-            final XFile? image =
-                await picker.pickImage(source: ImageSource.camera);
-
-            if (image != null) {
-              Get.back(result: {"files": image});
-            }
-
-            
-          },
-          title: "Take a photo"),
-      if (anotherWidget! == true) ...{
-        ThemeUtils.dividerGrey,
-        button(
-            function: () async {
-              Get.to(
-                const InsuranceInformationWidget(),
-              );
-            },
-            title: "Add info manually"),
+          child: Container(
+            color: const Color.fromARGB(255, 247, 246, 246),
+            height: 50,
+            child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SvgPicture.asset(
+                    ("assets/icons/info_manually.svg"),
+                    color: ThemeUtils.titleFilter,
+                  ),
+                  AutoSizeText("Add Info Manually",
+                      style: TextStyle(
+                          color: ThemeUtils.titleFilter,
+                          fontFamily: ThemeUtils.interRegular)),
+                  SizedBox(
+                    width: Get.context!.width * 0.065,
+                  ),
+                ]),
+          ),
+        ),
       },
-      ThemeUtils.dividerGrey,
       const Spacer(),
       customRow(),
-    ]);
-  }
-
-  Widget button({
-    required String title,
-    required Function function,
-  }) {
-    return InkWell(
-      onTap: () async {
-        function();
-      },
-      child: Container(
-        alignment: Alignment.center,
-        color: Colors.white,
-        height: 60,
-        child: Text(title,
-            style: TextStyle(
-                fontSize: 12.sp,
-                fontWeight: FontWeight.bold,
-                color: ThemeUtils.titleFilter,
-                fontFamily: ThemeUtils.interRegular)),
+      const SizedBox(
+        height: 10.0,
       ),
-    );
+    ]);
   }
 
   Widget addCalendar() {
@@ -173,20 +205,6 @@ class BottomSheetsUtils {
     return SizedBox(
       child:
           Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-        const SizedBox(
-          height: 20.0,
-        ),
-        Text(
-          "Select your birthday",
-          style: TextStyle(
-              fontSize: 13.sp,
-              fontWeight: FontWeight.bold,
-              fontFamily: ThemeUtils.interRegular,
-              color: Colors.black),
-        ),
-        const SizedBox(
-          height: 20.0,
-        ),
         Expanded(
           child: CalendarDatePicker2(
               config: config, value: [], onValueChanged: (dates) => {}),
@@ -197,37 +215,34 @@ class BottomSheetsUtils {
   }
 
   Widget customRow() {
-    return Container(
-      height: Get.context!.height * 0.10,
-      //color: Colors.green,
-      padding: EdgeInsets.only(
-        left: Get.context!.width * 0.05,
-        right: Get.context!.width * 0.05,
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          GestureDetector(
-            onTap: () {
-              Get.back();
-            },
-            child: Text(
-              'Cancel',
-              style: TextStyle(color: ThemeUtils.colorPurple, fontSize: 16.sp),
-            ),
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        MaterialButton(
+          onPressed: () {
+            Get.back();
+          },
+          child: AutoSizeText("Cancel",
+              style: TextStyle(
+                  fontFamily: ThemeUtils.interRegular,
+                  color: ThemeUtils.colorPurple)),
+        ),
+        MaterialButton(
+          height: 50,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
           ),
-          NormalButton(
-            height: 50,
-            width: Get.context!.width * 0.35,
-            text: 'Save',
-            backgroundColor: ThemeUtils.colorPurple,
-            onTap: () {
-              Get.back();
-            },
-          ),
-        ],
-      ),
+          minWidth: Get.context!.width * 0.3750,
+          color: ThemeUtils.colorPurple,
+          onPressed: () {
+            Get.back();
+          },
+          child: AutoSizeText("Save",
+              style: TextStyle(
+                  fontFamily: ThemeUtils.interRegular, color: Colors.white)),
+        )
+      ],
     );
   }
 }

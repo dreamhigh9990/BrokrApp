@@ -8,13 +8,10 @@ import 'package:brokr/ui/guest/fragments/settings/payments_page.dart';
 import 'package:brokr/ui/guest/fragments/settings/privacy_page.dart';
 import 'package:brokr/ui/guest/fragments/settings/terms_page.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../utils/theme_utils.dart';
-import '../../../../widgets/appbar_widget.dart';
-import '../../../../widgets/bottom_bar_widget.dart';
 import '../../../../widgets/normal_button.dart';
 import '../../../fragments/settings/credits_page.dart';
 import '../../../fragments/settings/header_page.dart';
@@ -22,7 +19,6 @@ import '../../../fragments/settings/notifications_page.dart';
 import '../../../fragments/settings/personal_page.dart';
 import '../../../fragments/settings/refer_page.dart';
 import '../../../fragments/settings/support_page.dart';
-import '../guest_home_controller.dart';
 
 
 class ProfileFragment extends StatefulWidget {
@@ -33,9 +29,6 @@ class ProfileFragment extends StatefulWidget {
 }
 
 class _ProfileFragmentState extends State<ProfileFragment> {
-
-    final GuestHomeController guestHomeController = Get.find();
-    
   Widget _divider() {
     return const Divider(
       color: Colors.black,
@@ -74,16 +67,26 @@ class _ProfileFragmentState extends State<ProfileFragment> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-           appBar: const CustomBar(
-        title: 'Profile',
-        showLeading: false,
-      ),
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 5.0,
+          centerTitle: true,
+          leading: Container(),
+          title: const Text(
+            'Profile',
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.w600,
+              fontSize: 17,
+            ),
+          ),
+          actions: const [
+             DropdownButtonExample(),
+             SizedBox(width: 10.0,),
+          ],
+        ),
         body: SafeArea(
-          child: Stack(
-
-
-            children: [
-              ListView(
+          child: ListView(
             padding: const EdgeInsets.only(bottom: 24),
             children: [
               const Padding(
@@ -192,27 +195,6 @@ class _ProfileFragmentState extends State<ProfileFragment> {
               ),
             ],
           ),
-
-           GetBuilder<GuestHomeController>(
-                id: 'bottom_bar',
-                builder: (controller) => AnimatedPositioned(
-                      duration: const Duration(milliseconds: 300),
-                      curve: Curves.easeInOut,
-                      bottom: guestHomeController.percent <= 0.1 ? -50.0 : 0.0,
-                      child: BottomBarWidget(
-                        labels: guestHomeController.labelFragments,
-                        iconsPath: guestHomeController.iconFragments,
-                        index: guestHomeController.index,
-                        countNotifications:
-                            guestHomeController.countNewNotifications,
-                        onTabItemSelected: (int value) {
-                          guestHomeController.updatePage(value);
-                        },
-                      ),
-                    )),
-                    
-            ],
-          )
         ),
       );
 }

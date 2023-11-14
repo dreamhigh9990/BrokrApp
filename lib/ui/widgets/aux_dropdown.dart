@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class FlutterFlowDropDown<T> extends StatefulWidget {
-  FlutterFlowDropDown({
-    super.key,
+  const FlutterFlowDropDown({super.key, 
     this.initialOption,
     this.hintText,
     required this.options,
@@ -12,9 +10,7 @@ class FlutterFlowDropDown<T> extends StatefulWidget {
     this.icon,
     this.width,
     this.height,
-    required this.dropDownStyleText,
     this.fillColor,
-    this.dropdownColor,
     required this.textStyle,
     required this.elevation,
     required this.borderWidth,
@@ -25,7 +21,7 @@ class FlutterFlowDropDown<T> extends StatefulWidget {
     this.disabled = false,
   });
 
-  T? initialOption;
+  final T? initialOption;
   final String? hintText;
   final List<T> options;
   final List<String>? optionLabels;
@@ -34,9 +30,7 @@ class FlutterFlowDropDown<T> extends StatefulWidget {
   final double? width;
   final double? height;
   final Color? fillColor;
-  final Color? dropdownColor;
   final TextStyle textStyle;
-  final TextStyle dropDownStyleText;
   final double elevation;
   final double borderWidth;
   final double borderRadius;
@@ -50,38 +44,48 @@ class FlutterFlowDropDown<T> extends StatefulWidget {
 }
 
 class _FlutterFlowDropDownState<T> extends State<FlutterFlowDropDown<T>> {
+  T? dropDownValue;
+
+  @override
+  void initState() {
+    super.initState();
+    dropDownValue = widget.initialOption;
+  }
+
   @override
   Widget build(BuildContext context) {
-    final dropdownWidget = Container(
-      child: DropdownButton<T>(
-        borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0)),
-        menuMaxHeight: 300,
-        value: widget.initialOption,
-        hint: Text(widget.hintText!.capitalizeFirst!, style: widget.textStyle),
-        items: widget.options
-            .asMap()
-            .entries
-            .map(
-              (option) => DropdownMenuItem<T>(
-                value: option.value,
-                child: Text(
-                  option.value.toString(),
-                  style: widget.dropDownStyleText,
-                ),
+    final dropdownWidget = DropdownButton<T>(
+      value: widget.options.contains(dropDownValue) ? dropDownValue : null,
+      hint: widget.hintText != null
+          ? Text(widget.hintText!, style: widget.textStyle)
+          : null,
+      items: widget.options
+          .asMap()
+          .entries
+          .map(
+            (option) => DropdownMenuItem<T>(
+              value: option.value,
+              child: Text(
+                widget.optionLabels == null ||
+                        widget.optionLabels!.length < option.key + 1
+                    ? option.value.toString()
+                    : widget.optionLabels![option.key],
+                style: widget.textStyle,
               ),
-            )
-            .toList(),
-        elevation: widget.elevation.toInt(),
-        onChanged: (value) {
-          widget.initialOption = value;
-          widget.onChanged(value);
-        },
-        icon: widget.icon,
-        isExpanded: true,
-        dropdownColor: widget.dropdownColor,
-        focusColor: Colors.transparent,
-      ),
+            ),
+          )
+          .toList(),
+      elevation: widget.elevation.toInt(),
+      onChanged: !widget.disabled
+          ? (value) {
+              dropDownValue = value;
+              widget.onChanged(value);
+            }
+          : null,
+      icon: widget.icon,
+      isExpanded: true,
+      dropdownColor: widget.fillColor,
+      focusColor: Colors.transparent,
     );
     final childWidget = DecoratedBox(
       decoration: BoxDecoration(

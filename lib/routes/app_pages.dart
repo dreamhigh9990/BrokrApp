@@ -1,4 +1,4 @@
-import 'package:brokr/ui/guest/pages/home/fragments/car/car_camera_page.dart';
+
 import 'package:brokr/ui/guest/pages/home/guest_home_bindings.dart';
 import 'package:brokr/ui/guest/pages/home/guest_home_page.dart';
 import 'package:get/get.dart';
@@ -10,8 +10,7 @@ import '../ui/commons/pages/login_page.dart';
 import '../ui/commons/pages/splash_page.dart';
 import '../ui/commons/pages/verify_email_page.dart';
 import '../ui/commons/pages/verify_phone_page.dart';
-import '../ui/guest/pages/home/fragments/car/car_camera_bindings.dart';
-import '../ui/guest/pages/home/fragments/chat/chat_room_fragment.dart';
+import '../ui/guest/fragments/chat/chat_room_fragment.dart';
 import '../ui/guest/fragments/settings/credits_page.dart';
 import '../ui/guest/fragments/settings/language_page.dart';
 import '../ui/guest/fragments/settings/notifications_page.dart';
@@ -21,6 +20,24 @@ import '../ui/guest/fragments/settings/privacy_page.dart';
 import '../ui/guest/fragments/settings/refer_page.dart';
 import '../ui/guest/fragments/settings/support_page.dart';
 import '../ui/guest/fragments/settings/terms_page.dart';
+
+import '../src/pages/Listing/car/address_in.page.dart' as CarAddress;
+import '../src/pages/Listing/car/car.page.dart';
+import '../src/pages/Listing/car/car_done.page.dart';
+import '../src/pages/Listing/car/info_vim.page.dart';
+import '../src/pages/Listing/car/manual_vin.page.dart';
+import '../src/pages/Listing/car/scan_vin.page.dart';
+import '../src/pages/Listing/yacht/address_in.page.dart';
+import '../src/pages/Listing/yacht/confirm_address.page.dart';
+import '../src/pages/Listing/yacht/yacht.page.dart';
+import '../src/pages/profile/profile.page.dart';
+import '../src/pages/Listing/car/confirm_address.page.dart' as CarConfirm;
+
+import '../src/pages/Listing/building/confirm_address.page.dart'
+    as BuildingConfirm;
+import '../src/pages/Listing/building/address_in.page.dart' as BuildingAddress;
+import '../src/pages/Listing/building/building.page.dart';
+import '../src/pages/Listing/building/building_done.page.dart';
 
 abstract class AppPages {
   static const duration = Duration(milliseconds: 750);
@@ -68,7 +85,7 @@ abstract class AppPages {
         transition: Transition.fadeIn),
     GetPage(
         name: PaymentsPage.name,
-        page: () => PaymentsPage(),
+        page: () => const PaymentsPage(),
         transitionDuration: duration,
         transition: Transition.fadeIn),
     GetPage(
@@ -117,13 +134,81 @@ abstract class AppPages {
         binding: GuestHomeBinding(),
         transitionDuration: duration,
         transition: Transition.fadeIn),
-
-
-
-        GetPage(
-        name: CarCameraPage.id,
-        page: () => CarCameraPage(),
-        binding: CarCameraBinding(),
+        
+    GetPage(
+        name: CarPage.name,
+        page: () => CarPage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    GetPage(
+        name: CarDonePage.name,
+        page: () => CarDonePage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    GetPage(
+        name: InfoVIMPage.name,
+        page: () => InfoVIMPage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    GetPage(
+        name: ScanVinPage.name,
+        page: () => ScanVinPage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    GetPage(
+        name: YachtPage.name,
+        page: () => YachtPage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    GetPage(
+        name: ManualVinPage.name,
+        page: () => ManualVinPage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    GetPage(
+        name: ProfilePage.name,
+        page: () => ProfilePage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    GetPage(
+        name: AddressInPage.name,
+        page: () => AddressInPage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    GetPage(
+        name: CarAddress.AddressInPage.name,
+        page: () => CarAddress.AddressInPage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    GetPage(
+        name: ConfirmAddressPage.name,
+        page: () => ConfirmAddressPage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    GetPage(
+        name: CarConfirm.ConfirmAddressPage.name,
+        page: () => CarConfirm.ConfirmAddressPage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    
+    GetPage(
+        name: BuildingPage.name,
+        page: () => BuildingPage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    GetPage(
+        name: BuildingDonePage.name,
+        page: () => BuildingDonePage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    GetPage(
+        name: BuildingAddress.AddressInPage.name,
+        page: () => BuildingAddress.AddressInPage(),
+        transitionDuration: duration,
+        transition: Transition.fadeIn),
+    GetPage(
+        name: BuildingConfirm.ConfirmAddressPage.name,
+        page: () => BuildingConfirm.ConfirmAddressPage(),
         transitionDuration: duration,
         transition: Transition.fadeIn),
   ];

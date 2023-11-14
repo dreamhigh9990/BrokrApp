@@ -1,14 +1,16 @@
 import 'package:brokr/ui/widgets/booking_detail/locale/about_the_host_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+
 import '../../../../models/super_model.dart';
 import '../../../../utils/theme_utils.dart';
 import '../../item_card.dart';
 import '../../normal_button.dart';
+import '../../stars_widget.dart';
 import '../../text_align_left_widget.dart';
 import '../../tiles/review_tile_widget.dart';
+import 'rating_and_reviews_widget.dart';
 
 class HostDetailWidget extends StatelessWidget {
   List<ReviewTileHorizontalWidget> reviews = [
@@ -68,8 +70,8 @@ class HostDetailWidget extends StatelessWidget {
           padding: EdgeInsets.only(
               top: Get.context!.height * 0.025,
               bottom: Get.context!.height * 0.025,
-              left: Get.context!.width * 0.05,
-              right: Get.context!.width * 0.05),
+              left: Get.context!.width * 0.027,
+              right: Get.context!.width * 0.027),
           shrinkWrap: true,
           children: [
             superHeaderHostDetail(),
@@ -181,13 +183,13 @@ class HostDetailWidget extends StatelessWidget {
   static Widget superHeaderHostDetail(
       {EdgeInsets? padding, double? firstRadius, double? secondRadius}) {
     padding ??= EdgeInsets.only(
-        left: Get.context!.width * 0.4, right: Get.context!.width * 0.4);
+        left: Get.context!.width * 0.35, right: Get.context!.width * 0.35);
 
     firstRadius ??= Get.height * .08;
     secondRadius ??= Get.height * .025;
 
     return InkWell(
-      onTap: () {
+      onTap: (){
         print("test");
 
         Get.to(HostDetailWidget());
@@ -227,30 +229,10 @@ class HostDetailWidget extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
           ),
-          const SizedBox(
-            height: 2.5,
+            const SizedBox(
+            height:2.5,
           ),
-          Container(
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.star_rounded,
-                  color: ThemeUtils.colorPurple,
-                ),
-                Text(
-                  "0.0",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12.sp,
-                  ),
-                ),
-              ],
-            ),
-          ),
+          Padding(padding: padding, child: StarsWidget(rating: 4.5, size: 14)),
           Center(
             child: Text(
               "50 Trips  .  Joined Apr 2022",

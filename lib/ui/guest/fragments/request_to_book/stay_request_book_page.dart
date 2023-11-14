@@ -36,12 +36,7 @@ class StayRequestBookPage extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-            Container(
-                  
-                  height: Get.context!.height*0.25,
-                  width: Get.context!.width,
-                
-                child: HeaderImageItemWidget(imageUrl: superModel.image!)),
+              HeaderImageItemWidget(imageUrl: superModel.image!),
               Container(
                 margin: ThemeUtils.paddingScaffoldxTop10,
                 padding: ThemeUtils.paddingScaffoldx05,
@@ -53,7 +48,7 @@ class StayRequestBookPage extends StatelessWidget {
                     description: description,
                     rating: rating,
                     bath: bath,
-                
+                    showPrice: false,
                   ),
                   const SizedBox(
                     height: 10.0,

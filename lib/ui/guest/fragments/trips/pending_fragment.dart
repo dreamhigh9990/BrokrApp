@@ -12,13 +12,12 @@ import '../../../../utils/calendar_utils.dart';
 import '../../../../utils/theme_utils.dart';
 import '../../../widgets/item_card.dart';
 import '../../../widgets/tiles/asset_tile_widget.dart';
-
+import '../../pages/home/widgets/tab_buttoms_widget.dart';
 
 class PendingFragment extends StatefulWidget {
-     int groupValue;
   final List<List<SuperModel>> list;
+  const PendingFragment({required this.list, super.key});
 
-   PendingFragment({required this.list, super.key ,required this.groupValue} );
   @override
   _PendingFragmentState createState() => _PendingFragmentState();
 }
@@ -45,7 +44,7 @@ class _PendingFragmentState extends State<PendingFragment> {
   DateTime? _selectedDay;
 
   var _isCalendarVisible = false;
-
+  int groupValue = 0;
 
   @override
   void initState() {
@@ -108,6 +107,11 @@ class _PendingFragmentState extends State<PendingFragment> {
     ),
   ].reversed.toList();
 
+  void updateWidgets(int value) {
+    setState(() {
+      groupValue = value;
+    });
+  }
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -189,7 +193,10 @@ class _PendingFragmentState extends State<PendingFragment> {
             const SizedBox(
               height: 20.0,
             ),
-         
+            TabButtomWidget(
+              groupValue: groupValue,
+              function: updateWidgets,
+            ),
             Expanded(
                 child: ListView.builder(
                     shrinkWrap: true,
@@ -202,8 +209,8 @@ class _PendingFragmentState extends State<PendingFragment> {
                         child: GestureDetector(
                           onTap: () {
                             Get.to(BookingConfirmed(
-                                showFragments: widget.groupValue,
-                                superModel: widget.list[widget.groupValue][index]));
+                                showFragments: groupValue,
+                                superModel: widget.list[groupValue][index]));
                           },
                           child: SizedBox(
                             width: MediaQuery.of(context).size.width * 0.9,
@@ -214,9 +221,9 @@ class _PendingFragmentState extends State<PendingFragment> {
                                 left: ThemeUtils.borderShadowAppBar,
                                 right: ThemeUtils.borderShadowAppBar,
                               ),
-                              superModel: widget.list[widget.groupValue][index],
+                              superModel: widget.list[groupValue][index],
                               changedFavorite: () {},
-                              isBoat: widget.groupValue== 2 ? true : false,
+                              isBoat: groupValue== 2 ? true : false,
                             ),
                           ),
                         ),

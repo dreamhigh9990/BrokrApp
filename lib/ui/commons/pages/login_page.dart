@@ -5,6 +5,7 @@ import 'package:brokr/ui/widgets/normal_button.dart';
 import 'package:brokr/ui/widgets/input_field.dart';
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import '../../../controllers/global_controller.dart';
@@ -194,10 +195,12 @@ class _LoginPage extends State<LoginPage> {
               ),
               SizedBox(height: Get.context!.height * 0.025),
               const Text("Don’t have an account?"),
-              SizedBox(height: Get.context!.height * 0.025),
+               SizedBox(height: Get.context!.height * 0.025),
               NormalButton(
                 text: 'Apply Here',
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed("/listing-select");
+                },
                 backgroundColor: ThemeUtils.colorPurple,
               ),
               const SizedBox(height: 32),

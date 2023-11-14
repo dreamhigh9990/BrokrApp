@@ -1,31 +1,22 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:brokr/ui/commons/pages/success_page.dart';
 import 'package:brokr/ui/guest/fragments/request_to_book/widgets/commons_widget.dart';
 import 'package:brokr/ui/guest/fragments/request_to_book/widgets/price_details_widget.dart';
-import 'package:brokr/ui/guest/pages/home/guest_home_controller.dart';
 import 'package:brokr/ui/widgets/appbar_widget.dart';
-import 'package:brokr/ui/widgets/bottom_bar_container_full_widget.dart';
+import 'package:brokr/ui/widgets/normal_button.dart';
+import 'package:brokr/ui/widgets/text_align_left_widget.dart';
 import 'package:brokr/utils/theme_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../../../models/super_model.dart';
-import '../../../bottom_sheets/bottom_sheets_guest.dart';
-import '../../../bottom_sheets/hours_list_widget.dart';
-import '../../../widgets/booking_detail/locale/column_headers_widget.dart';
 import '../../../widgets/booking_detail/locale/header_image_item_widget.dart';
 import '../../../widgets/booking_detail/locale/header_title_item_widget.dart';
 
 class CarRequestBookPage extends StatelessWidget {
-  final GuestHomeController guestHomeController = Get.find();
   final SuperModel superModel;
   final String title, owner, address, description;
   final double rating, bath;
-    String pickupDate = "Sat, 08 Oct";
-  String returnDate = "Sat, 08 Oct";
-  HourModel firstHour = HourModel(title: "10:00 AM", value: false);
-  HourModel secondHour = HourModel(title: "10:00 AM", value: false);
-  
-  CarRequestBookPage(
+  const CarRequestBookPage(
       {super.key,
       required this.superModel,
       required this.title,
@@ -38,17 +29,11 @@ class CarRequestBookPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomBar(title: "Request to book"),
-      body: SizedBox(
-        height: Get.context!.height,
-        width: Get.context!.width,
-        child: SingleChildScrollView(
+        appBar: const CustomBar(title: "Request to book"),
+        body: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
-                  height: Get.context!.height * 0.25,
-                  width: Get.context!.width,
-                  child: HeaderImageItemWidget(imageUrl: superModel.image!)),
+              HeaderImageItemWidget(imageUrl: superModel.image!),
               Container(
                 margin: ThemeUtils.paddingScaffoldxTop10,
                 padding: ThemeUtils.paddingScaffoldx05,
@@ -60,71 +45,126 @@ class CarRequestBookPage extends StatelessWidget {
                     description: description,
                     rating: rating,
                     bath: bath,
-                    showdDivider: false,
+                    showPrice: false,
                   ),
-                  DatesColumnHeadersWidget(
+                  const SizedBox(
+                    height: 10.0,
+                  ),
+                  TextAlignLeft(
                     title: "Dates",
-                    svg: "circle_dates",
-                    firstHour: firstHour,
-                    secondHour: secondHour,
-                    pickupDate: pickupDate,
-                    returnDate: returnDate,
-                    callback: () async {},
+                    fontsize: 16,
                   ),
-                  ColumnHeadersWidget(
-                    isShowChange: false,
-                    title: "Pickup & Return",
-                    svg: "circle_location",
-                    content: "New Jersy, Bloomfield,  72 Avenue 8731",
-                    callback: () async {},
+                  const SizedBox(
+                    height: 10.0,
                   ),
-                  const PriceDetailsCarWidget(),
-                  InkWell(
-                    onTap: () async {
-                      var response =
-                          await GuestBottomSheests.buildshowGeneralDialog(
-                              context: context,
-                              widgetChild: guestHomeController.bottomSheests
-                                  .refundableDeposit(),
-                              height: Get.context!.height * 0.6850);
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-                      decoration: BoxDecoration(
-                          color: ThemeUtils.colorPurple.withOpacity(0.25),
-                          borderRadius: BorderRadius.circular(10.0),
-                          border: Border.all(
-                              color: ThemeUtils.colorPurple, width: 1.0)),
-                      child: Column(
-                        children: [
-                          ListTile(
-                            leading: null,
-                            minLeadingWidth: 0.0,
-                            contentPadding: const EdgeInsets.all(0.0),
-                            minVerticalPadding: 0.0,
-                            trailing: const AutoSizeText("\$2000.00"),
-                            title: const AutoSizeText(
-                              "Refundable deposit",
-                              style: TextStyle(fontSize: 15.0),
-                            ),
-                            subtitle: Text(
-                              "This booking requires a security deposit, refunded by Nov 07.",
-                              style: TextStyle(fontSize: 7.sp),
-                            ),
-                          ),
-                        ],
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Sat, Oct 08, 10:30 AM",
+                        style: TextStyle(
+                            fontFamily: ThemeUtils.interRegular,
+                            color: ThemeUtils.titleFilter),
                       ),
+                      Container(
+                        color: Colors.grey,
+                        height: 20.0,
+                        width: 2.0,
+                      ),
+                      Text(
+                        "Sat, Oct 08, 10:30 AM",
+                        style: TextStyle(
+                            fontFamily: ThemeUtils.interRegular,
+                            color: ThemeUtils.titleFilter),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  ThemeUtils.dividerGrey,
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  TextAlignLeft(
+                    title: "Pickup & Return",
+                    fontsize: 16,
+                  ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  Text(
+                    "New Jersy, Bloomfield,  72 Avenue 8731",
+                    style: TextStyle(
+                        fontFamily: ThemeUtils.interRegular,
+                        color: ThemeUtils.titleFilter),
+                  ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  ThemeUtils.dividerGrey,
+                const PriceDetailsCarWidget(),
+                  Container(
+                    padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        border: Border.all(color: Colors.grey, width: 1.0)),
+                    child: Column(
+                      children: const [
+                        ListTile(
+                          minLeadingWidth: 0.0,
+                          contentPadding: EdgeInsets.all(0.0),
+                          minVerticalPadding: 0.0,
+                          trailing: AutoSizeText("\$5.00"),
+                          leading: null,
+                          title: AutoSizeText(
+                            "Extra mile",
+                            style: TextStyle(fontSize: 15.0),
+                          ),
+                          subtitle: AutoSizeText(
+                            "You’ll be charged (\$5) for each extra mile over the amount included ",
+                            style: TextStyle(fontSize: 12.0),
+                          ),
+                        ),
+                        ListTile(
+                          leading: null,
+                          minLeadingWidth: 0.0,
+                          contentPadding: EdgeInsets.all(0.0),
+                          minVerticalPadding: 0.0,
+                          trailing: AutoSizeText("\$2000.00"),
+                          title: AutoSizeText(
+                            "Refundable deposit",
+                            style: TextStyle(fontSize: 15.0),
+                          ),
+                          subtitle: AutoSizeText(
+                            "Refunded 48 hours after this trip ends",
+                            style: TextStyle(fontSize: 12.0),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  CommonsWidget(showPayWith: true),
+                  CommonsWidget(showPayWith: false),
+                  NormalButton(
+                      text: "Send Request",
+                      onTap: () {
+                        Get.to(const SuccessPage(
+                          svg: "confirm",
+                          title: "Your request it’s being processed",
+                          subtitle:
+                              "Please check periodically to see if your request has been accepted or rejected by the Host.",
+                          titleButton: "Done",
+                        ));
+                      },
+                      backgroundColor: ThemeUtils.colorPurple),
+                  const SizedBox(
+                    height: 10.0,
+                  ),
                 ]),
               )
             ],
           ),
-        ),
-      ),
-      bottomNavigationBar:
-          BottomBarContainerFullWidget(ontap: () {}, title: "Send request"),
-    );
+        ));
   }
 }

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -9,15 +7,8 @@ import '../../bottom_sheets/bottom_sheets_utils.dart';
 import '../../widgets/normal_button.dart';
 import 'confirmed_page.dart';
 
-class CompleteProfile extends StatefulWidget {
-  @override
-  State<CompleteProfile> createState() => _CompleteProfileState();
-}
-
-class _CompleteProfileState extends State<CompleteProfile> {
-  bool isEditPhoto = false;
-
-  late File file;
+class CompleteProfile extends StatelessWidget {
+  const CompleteProfile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +22,7 @@ class _CompleteProfileState extends State<CompleteProfile> {
           child: NormalButton(
               text: "Complete",
               onTap: () {
-                Get.offAllNamed(
+                 Get.offAllNamed(
                   CongratulationsPage.name,
                   arguments: 'number',
                 );
@@ -70,38 +61,22 @@ class _CompleteProfileState extends State<CompleteProfile> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         InkWell(
-                          onTap: () async {
-                            var response =
-                                await BottomSheetsUtils.buildBottomSheet(
-                                    context: context,
-                                    child: BottomSheetsUtils()
-                                        .addCameraOrGallery(
-                                            context: context,
-                                            "Add your profile photo"),
-                                    height: Get.context!.height * 0.3250,
-                                    color: Colors.white,
-                                    padding: const EdgeInsets.all(5.0));
-                            print("//---/");
-                            print(response);
-
-                            if (response != null) {
-                              file = response["files"];
-                              isEditPhoto = true;
-                              setState(() {});
-                            }
+                          onTap: () {
+                            BottomSheetsUtils.buildBottomSheet(
+                                context: context,
+                                child: BottomSheetsUtils().addCameraOrGallery(
+                                    "Add Your Profile Photo"),
+                                height: Get.context!.height * 0.3250,
+                                color: Colors.white,
+                                padding: const EdgeInsets.all(5.0));
                           },
                           child: CircleAvatar(
                             backgroundColor: Colors.grey,
                             radius: Get.height * .08,
-                            backgroundImage: isEditPhoto == false
-                                ? Image.asset(
-                                    "assets/icons/user-profile-avatar-svgrepo-com 1.png",
-                                    fit: BoxFit.contain,
-                                  ).image
-                                : Image.file(
-                                    file,
-                                    fit: BoxFit.contain,
-                                  ).image,
+                            backgroundImage: Image.asset(
+                              "assets/icons/user-profile-avatar-svgrepo-com 1.png",
+                              fit: BoxFit.contain,
+                            ).image,
                             child: Align(
                               alignment: Alignment.bottomRight,
                               child: CircleAvatar(
@@ -178,11 +153,11 @@ class _CompleteProfileState extends State<CompleteProfile> {
                                     fontWeight: FontWeight.normal,
                                     labelText: "Birthday",
                                     isPadding: ThemeUtils.padding15),
-                                child:  Row(
+                                child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
-                                  children:const [
+                                  children: const [
                                     Text(
                                       "2023-03-01",
                                     ),
